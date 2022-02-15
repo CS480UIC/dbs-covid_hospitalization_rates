@@ -5,9 +5,7 @@
 # Database
 covid_hospitalization_rates
 # Author(s)
-Hannah Gavilan  
-Maseeh Khan 
-Suhabe Sukhni
+Hannah Gavilan, Maseeh Khan, Suhabe Sukhni
 # Database description
 Write the database description and requirements here
 
