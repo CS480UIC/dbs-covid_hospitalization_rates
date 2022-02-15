@@ -7,5 +7,5 @@ covid_hospitalization_rates
 # Author(s)
 Hannah Gavilan, Maseeh Khan, Suhabe Sukhni
 # Database description
-Write the database description and requirements here
+Analyzing the covid hospitalization rates for people ages 18-35, including vaccinated vs unvaccinated and those with pre-existing health conditions
 
