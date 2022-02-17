@@ -25,7 +25,7 @@
 - patient_checkedinto_hospital 1(1)
 - hospital_existsin_country 1(1)
 - patient_staysin_room M(0)
-- patient_receives_bill M(0)
+- patient_receives_bill 1(1)
 - employee_attendsto_room M(0) 
 - employee_treats_patient M(0)
 - employee_worksat_hospital 1(1)
