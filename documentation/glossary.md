@@ -1,1 +1,22 @@
-//test
+## Glossary
+1. [Entity](#entity)
+1. [Relationship](#relationship)
+1. [Attribute](#attribute)
+# entity
+- patient
+- hospital
+- country
+# relationship
+- patient_checkedinto_hospital
+- hospital_existsin_country
+# attribute
+- patient_id
+- age
+- vaccination_status
+- preexisting_conditions 
+- hospitalization_date
+- hospital_id 
+- hospital_address
+- hospital_name
+- country_id
+- country_name
