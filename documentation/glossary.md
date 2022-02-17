@@ -4,14 +4,14 @@
 1. [Attribute](#Attribute)
 # Entity
 - patient
-  - Synonym:
-  - Description: 
+  - Synonym: ill person, victim
+  - Description: person being treated for COVID-19 at a hospital
 - hospital
   - Synonym: health center, infirmary
   - Description: an institution that is built, staffed, and equipped for the diagnosis of disease; for the treatment, both medical and surgical, of the sick and the injured; and for their housing during this process.
 - country
-  - Synonym:
-  - Description: 
+  - Synonym: community, region
+  - Description: A nation that has it's own government and population
 - room
   - Synonym: lodge, board, stay
   - Description: The room is the specific location in the hospital that a patient stays in and employees attend 
