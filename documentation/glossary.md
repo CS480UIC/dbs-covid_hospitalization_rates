@@ -4,19 +4,25 @@
 1. [Attribute](#Attribute)
 # Entity
 - patient
+  - Synonym:
+  - Description: 
 - hospital
+  - Synonym:
+  - Description: 
 - country
+  - Synonym:
+  - Description: 
 # Relationship
-- patient_checkedinto_hospital
-- hospital_existsin_country
+- patient_checkedinto_hospital 1(1)
+- hospital_existsin_country 1(1)
 # Attribute
-- patient_id
-- age
-- vaccination_status
-- preexisting_conditions 
-- hospitalization_date
-- hospital_id 
-- hospital_address
-- hospital_name
-- country_id
-- country_name
+- patient_id (pk) 1-1 (1)
+- age M-1 (1)
+- vaccination_status M-1 (1)
+- preexisting_conditions M-M (0)
+- hospitalization_date M-1 (1)
+- hospital_id (pk) 1-1 (1)
+- hospital_address 1-1 (1)
+- hospital_name M-1 (1)
+- country_id (pk) 1-1 (1)
+- country_name 1-1 (1)
