@@ -13,14 +13,14 @@
   - Synonym:
   - Description: 
 - room
-  - Synonym:
-  - Description: 
+  - Synonym: lodge, board, stay
+  - Description: The room is the specific location in the hospital that a patient stays in and employees attend 
 - bill
   - Synonym: invoice, statement
   - Description: an amount of money owed for goods supplied or services rendered, set out in a printed or written statement of charges.
 - employee
-  - Synonym:
-  - Description: 
+  - Synonym: worker, staff
+  - Description: An employee is a person who works at the hospital and may be a doctor, nurse, or from any other department in the hospital.
 # Relationship
 - patient_checkedinto_hospital 1(1)
 - hospital_existsin_country 1(1)
