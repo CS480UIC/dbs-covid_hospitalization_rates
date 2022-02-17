@@ -7,8 +7,8 @@
   - Synonym:
   - Description: 
 - hospital
-  - Synonym:
-  - Description: 
+  - Synonym: health center, infirmary
+  - Description: an institution that is built, staffed, and equipped for the diagnosis of disease; for the treatment, both medical and surgical, of the sick and the injured; and for their housing during this process.
 - country
   - Synonym:
   - Description: 
@@ -16,8 +16,8 @@
   - Synonym:
   - Description: 
 - bill
-  - Synonym:
-  - Description: 
+  - Synonym: invoice, statement
+  - Description: an amount of money owed for goods supplied or services rendered, set out in a printed or written statement of charges.
 - employee
   - Synonym:
   - Description: 
