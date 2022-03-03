@@ -2,7 +2,7 @@
 1. [Entity](#Entity)
 1. [Relationship](#Relationship)
 1. [Attribute](#Attribute)
-2. [Misc.](#Misc.)
+2. [Misc](#Misc)
 # Entity
 - patient
   - Synonym: ill person, victim
@@ -59,5 +59,5 @@
 - employee_id (pk) 1-1 (1) NOT NULL SMALLINT UNSIGNED
 - name M-1 (1) NOT NULL VARCHAR(60)
 - department 1-1 (1) NOT NULL VARCHAR(60)
-#Misc.
+# Misc
 - Plural attribute: condition_name is a plural attrbiute because a patient can have multiple pre-existing conditions and therefore will need a place for these conditions to be listed.
