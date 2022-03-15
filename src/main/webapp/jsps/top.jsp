@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">Hannah Gavilan</h1>
+<h1 style="text-align: center;">Covid Hospitalization Rates</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
