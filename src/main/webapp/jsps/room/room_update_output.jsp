@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Employee</title>
+    <title>Delete Room</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,28 @@
   </head>
   
   <body>
-  <h1>Update Employee</h1>
+  <h1>Update Room</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Employee ID    :<input type="text" name="employee_id1" value="${employee.employee_id }" disabled/>
+	Room Number    :<input type="text" name="room_number1" value="${room.room_number }" disabled/>
 	<br/>
 	
-	Name: <input type="text" name="name1" value="${employee.name }" disabled />
+	Patient ID:<input type="text" name="patient_id1" value="${room.patient_id }" disabled />
 	<br/>
-	Department	：<input type="text" name="department1" value="${employee.department }" disabled/>
+	Employee ID	：<input type="text" name="employee_id1" value="${room.employee_id }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${employee.employee_id }"/>
-	Name: <input type="text" name="name" value="${form.name }"/>
-	<span style="color: red; font-weight: 900">${errors.name }</span>
+				<input type="hidden" name="room_number" value="${room.room_number }"/>
+	Patient ID:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Department	：<input type="text" name="department" value="${form.department }"/>
-	<span style="color: red; font-weight: 900">${errors.department }</span>
+	Employee ID	：<input type="text" name="employee_id" value="${form.employee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_id }</span>
 	<br/>
-	<input type="submit" value="Update Department"/>
+	<input type="submit" value="Update Room"/>
 </form>
 
 </body>
