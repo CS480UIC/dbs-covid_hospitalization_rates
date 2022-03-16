@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>hospital Create</title>
+    <title>Create Hospital</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>hospital Create</h1>
+  <h1>Create Hospital</h1>
 <form action="<c:url value='/hospitalServletCreate'/>" method="post">
 	Hospital ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
