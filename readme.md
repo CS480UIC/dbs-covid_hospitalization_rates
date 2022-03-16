@@ -47,3 +47,25 @@ Analyzing the covid hospitalization rates for people ages 18-35, including vacci
 
 # CRUD for Country:
 
+![crudcountry](https://user-images.githubusercontent.com/98372830/158509599-88694418-593b-43a2-9de8-27b4387e7862.PNG)
+
+![create country](https://user-images.githubusercontent.com/98372830/158509610-991085b1-e402-4abb-8d99-cbf88b007007.PNG)
+
+![readcountry](https://user-images.githubusercontent.com/98372830/158509622-10c8a627-802c-446d-b0b1-96dfc0aba8fe.PNG)
+
+![updatecountry](https://user-images.githubusercontent.com/98372830/158509636-b1359c5b-f2b7-4064-ac49-d9d92f3eb0a6.PNG)
+
+![deletecountry](https://user-images.githubusercontent.com/98372830/158509654-fd355069-2f4a-402d-85f2-98eaec29dfcb.PNG)
+
+# CRUD for Preexisting Conditions:
+
+![crudpre](https://user-images.githubusercontent.com/98372830/158509691-d409ecc2-d299-4769-99ba-21c433f62a5d.PNG)
+
+![createpre](https://user-images.githubusercontent.com/98372830/158509712-8e19d6a5-02ca-4c01-b883-5751d6f62ea9.PNG)
+
+![readpre](https://user-images.githubusercontent.com/98372830/158509745-748a4583-9a9a-4c76-ba18-f371c5b50e08.PNG)
+
+![updatepre](https://user-images.githubusercontent.com/98372830/158509757-937209ba-5921-4674-8aa7-91cd214a242a.PNG)
+
+![deletepre](https://user-images.githubusercontent.com/98372830/158509764-435d1c4a-0537-4677-a260-890f43c5bfd3.PNG)
+
