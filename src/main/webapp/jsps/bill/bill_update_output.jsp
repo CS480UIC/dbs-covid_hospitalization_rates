@@ -25,21 +25,24 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	<input type="hidden" name="bill_id" value="${bill.bill_id }"/>
-	Bill ID    :<input type="text" name="bill_id" value="${bill.bill_id }" disabled/>
+	Bill ID    :<input type="text" name="bill_id1" value="${bill.bill_id }" disabled/>
 	<br/>
-	Cost    :<input type="text" name="cost" value="${bill.cost }" disabled/>
+	Cost    :<input type="text" name="cost1" value="${bill.cost }" disabled/>
 	<br/>
-	Patient ID：<input type="text" name="patient_id" value="${bill.patient_id }" disabled/>
+	Patient ID：<input type="text" name="patient_id1" value="${bill.patient_id }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/billServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-	Bill ID    :<input type="text" name="bill_id" value="${bill.bill_id }" disabled/>
+	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }" disabled/>
+		<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>
-	Cost    :<input type="text" name="cost" value="${bill.cost }" disabled/>
+	Cost    :<input type="text" name="cost" value="${form.cost }" disabled/>
+		<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>
-	Patient ID：<input type="text" name="patient_id" value="${bill.patient_id }" disabled/>
+	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }" disabled/>
+		<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	<input type="submit" value="Update bill"/>
 </form>

@@ -24,11 +24,11 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${hospital.username }" disabled/>
+	Hospital ID   :<input type="text" name="hospital_id" value="${hospital.hospital_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${hospital.password }" disabled/>
+	Hospital Address   ：<input type="text" name="hospital_address" value="${hospital.hospital_address }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${hospital.email }" disabled/>
+	Hospital Name	：<input type="text" name="hospital_name" value="${hospital.hospital_name }" disabled/>
 	<br/>
 </form>
 

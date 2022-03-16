@@ -24,8 +24,8 @@
   <h1>Update</h1>
 <form action="<c:url value='/hospitalServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update User   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Hospital by ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
 	<input type="submit" value="Update hospital"/>
 </form>

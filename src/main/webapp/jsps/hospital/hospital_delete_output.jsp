@@ -25,13 +25,12 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/hospitalServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${hospital.username }"/>
-	User    :<input type="text" name="username" value="${hospital.username }" disabled/>
+		<input type="hidden" name="hospital_id" value="${hospital.hospital_id }"/>
+	Hospital ID   :<input type="text" name="hospital_id" value="${hospital.hospital_id }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${hospital.password }" disabled/>
+	Hospital Address   ：<input type="text" name="hospital_address" value="${hospital.hospital_address }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${hospital.email }" disabled/>
+	Hospital Name	：<input type="text" name="hospital_name" value="${hospital.hospital_name }" disabled/>
 	<br/>
 	<input type="submit" value="Delete hospital"/>
 </form>

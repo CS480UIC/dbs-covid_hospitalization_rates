@@ -23,14 +23,14 @@
   <body>
   <h1>hospital Create</h1>
 <form action="<c:url value='/hospitalServletCreate'/>" method="post">
-	User    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Hospital ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Hospital Address : <input type="text" name="hospital_address" value="${form.hospital_address }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_address }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Hospital Name :  <input type="text" name="hospital_name" value="${form.hospital_name }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_name }</span>
 	<br/>
 	<input type="submit" value="Create hospital"/>
 </form>

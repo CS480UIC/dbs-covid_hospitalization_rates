@@ -24,7 +24,7 @@
   <h1>Update</h1>
 <form action="<c:url value='/billServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Bill   :<input type="text" name="bill_id" value="${form.bill_id }"/>
+	Update Bill by ID : <input type="text" name="bill_id" value="${form.bill_id }"/>
 	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
 	<input type="submit" value="Update bill"/>
