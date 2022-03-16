@@ -32,7 +32,7 @@
 	Hospital Name :  <input type="text" name="hospital_name" value="${form.hospital_name }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_name }</span>
 	<br/>
-	<input type="submit" value="Create hospital"/>
+	<input type="submit" value="Create Hospital"/>
 </form>
   </body>
 </html>

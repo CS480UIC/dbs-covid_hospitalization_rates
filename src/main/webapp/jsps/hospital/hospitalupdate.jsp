@@ -27,7 +27,7 @@
 	Update Hospital by ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
-	<input type="submit" value="Update hospital"/>
+	<input type="submit" value="Update Hospital"/>
 </form>
   </body>
 </html>

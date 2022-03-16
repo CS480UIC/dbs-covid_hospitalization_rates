@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for bill </h1>
     <br>
-	<a href="<c:url value='/jsps/bill/billcreate.jsp'/>" target="_parent">Create bill</a> |&nbsp; 
-	<a href="<c:url value='/jsps/bill/billread.jsp'/>" target="_parent">Read bill</a> |&nbsp;
-	<a href="<c:url value='/jsps/bill/billupdate.jsp'/>" target="_parent">Update bill</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/bill/billdelete.jsp'/>" target="_parent">Delete bill</a>	
+	<a href="<c:url value='/jsps/bill/billcreate.jsp'/>" target="_parent">Create Bill</a> |&nbsp; 
+	<a href="<c:url value='/jsps/bill/billread.jsp'/>" target="_parent">Read Bill</a> |&nbsp;
+	<a href="<c:url value='/jsps/bill/billupdate.jsp'/>" target="_parent">Update Bill</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/bill/billdelete.jsp'/>" target="_parent">Delete Bill</a>	
 	    
   </body>
 </html>

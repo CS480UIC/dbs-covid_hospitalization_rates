@@ -27,7 +27,7 @@
 	Delete Bill by ID  :<input type="text" name="bill_id" value="${form.bill_id }"/>
 	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
-	<input type="submit" value="Delete bill"/>
+	<input type="submit" value="Delete Bill"/>
 </form>
   </body>
 </html>

@@ -34,7 +34,7 @@
 	Patient ID    :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/> --%>
-	<input type="submit" value="Read bill"/>
+	<input type="submit" value="Read Bill"/>
 </form>
   </body>
 </html>

@@ -23,7 +23,7 @@
   <body>
   <h1>Create Bill</h1>
 <form action="<c:url value='/billServletCreate'/>" method="post">
-	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }"/>
+	Bill ID  :  <input type="text" name="bill_id" value="${form.bill_id }"/>
 	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
 	Cost : <input type="text" name="cost" value="${form.cost }"/>
@@ -32,7 +32,7 @@
 	Patient ID :  <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patiend_id }</span>
 	<br/>
-	<input type="submit" value="Create bill"/>
+	<input type="submit" value="Create Bill"/>
 </form>
   </body>
 </html>

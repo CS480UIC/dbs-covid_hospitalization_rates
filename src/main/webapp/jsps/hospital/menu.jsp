@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for hospital </h1>
     <br>
-	<a href="<c:url value='/jsps/hospital/hospitalcreate.jsp'/>" target="_parent">Create hospital</a> |&nbsp; 
-	<a href="<c:url value='/jsps/hospital/hospitalread.jsp'/>" target="_parent">Read hospital</a> |&nbsp;
-	<a href="<c:url value='/jsps/hospital/hospitalupdate.jsp'/>" target="_parent">Update hospital</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/hospital/hospitaldelete.jsp'/>" target="_parent">Delete hospital</a>	
+	<a href="<c:url value='/jsps/hospital/hospitalcreate.jsp'/>" target="_parent">Create Hospital</a> |&nbsp; 
+	<a href="<c:url value='/jsps/hospital/hospitalread.jsp'/>" target="_parent">Read Hospital</a> |&nbsp;
+	<a href="<c:url value='/jsps/hospital/hospitalupdate.jsp'/>" target="_parent">Update Hospital</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/hospital/hospitaldelete.jsp'/>" target="_parent">Delete Hospital</a>	
 	    
   </body>
 </html>
