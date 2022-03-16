@@ -25,13 +25,10 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/billServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${bill.username }"/>
-	User    :<input type="text" name="username" value="${bill.username }" disabled/>
+		<input type="hidden" name="bill_id" value="${bill.bill_id }"/>
+	Bill ID    :<input type="text" name="bill_id" value="${bill.bill_id }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${bill.password }" disabled/>
-	<br/>
-	Email	：<input type="text" name="email" value="${bill.email }" disabled/>
+	Patient ID：<input type="text" name="patient_id" value="${bill.patient_id }" disabled/>
 	<br/>
 	<input type="submit" value="Delete bill"/>
 </form>

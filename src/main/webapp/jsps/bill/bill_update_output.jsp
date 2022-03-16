@@ -24,23 +24,22 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${bill.username }" disabled/>
+	<input type="hidden" name="bill_id" value="${bill.bill_id }"/>
+	Bill ID    :<input type="text" name="bill_id" value="${bill.bill_id }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password1" value="${bill.password }" disabled />
+	Cost    :<input type="text" name="cost" value="${bill.cost }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email1" value="${bill.email }" disabled/>
+	Patient ID：<input type="text" name="patient_id" value="${bill.patient_id }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/billServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${bill.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Bill ID    :<input type="text" name="bill_id" value="${bill.bill_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Cost    :<input type="text" name="cost" value="${bill.cost }" disabled/>
+	<br/>
+	Patient ID：<input type="text" name="patient_id" value="${bill.patient_id }" disabled/>
 	<br/>
 	<input type="submit" value="Update bill"/>
 </form>

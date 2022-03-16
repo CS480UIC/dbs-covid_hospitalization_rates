@@ -21,11 +21,11 @@
   </head>
   
   <body>
-  <h1>Delete bill</h1>
+  <h1>Delete Bill</h1>
 <form action="<c:url value='/billServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete User   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Bill ID  :<input type="text" name="bill_id" value="${form.bill_id }"/>
+	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
 	<input type="submit" value="Delete bill"/>
 </form>

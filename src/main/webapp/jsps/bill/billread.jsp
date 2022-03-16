@@ -21,18 +21,18 @@
   </head>
   
   <body>
-  <h1>Read bill</h1>
+  <h1>Read Bill</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/billServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	User    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Bill ID  :<input type="text" name="bill_id" value="${form.bill_id }"/>
+	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+<%-- 	Cost    :<input type="text" name="cost" value="${form.cost }"/>
+	<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Patient ID    :<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/> --%>
 	<input type="submit" value="Read bill"/>
 </form>
