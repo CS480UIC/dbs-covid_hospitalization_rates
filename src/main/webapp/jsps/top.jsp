@@ -48,6 +48,10 @@
 			<a href="<c:url value='/jsps/room/menu.jsp'/>" target="body">CRUD Room</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/bill/menu.jsp'/>" target="body">CRUD Bill</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/hospital/menu.jsp'/>" target="body">CRUD Hospital</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/patient/menu.jsp'/>" target="body">CRUD Patient</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/country/menu.jsp'/>" target="body">CRUD Country</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/preexisting_conditions/menu.jsp'/>" target="body">CRUD Preexisting Conditions</a> |&nbsp;&nbsp;
+
 
 		</c:otherwise>
 	</c:choose>
