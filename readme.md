@@ -69,3 +69,23 @@ Analyzing the covid hospitalization rates for people ages 18-35, including vacci
 
 ![deletepre](https://user-images.githubusercontent.com/98372830/158509764-435d1c4a-0537-4677-a260-890f43c5bfd3.PNG)
 
+# CRUD for Bill:
+
+![image](https://user-images.githubusercontent.com/22566105/158514357-68d240bc-fa1c-46b1-b610-18e4e221dc56.png)
+
+![image](https://user-images.githubusercontent.com/22566105/158514405-1d0da59e-bc23-4120-8d5f-17cfff382317.png)
+
+![image](https://user-images.githubusercontent.com/22566105/158514475-f3991a4c-078a-4670-a573-dd24e643b950.png)
+
+![image](https://user-images.githubusercontent.com/22566105/158514497-615267fe-fd0f-46e7-b055-1ecbaaa05840.png)
+
+![image](https://user-images.githubusercontent.com/22566105/158514519-929f44db-8a00-4b63-b504-2ea09d54a2f2.png)
+
+# CRUD for Hospital:
+
+![image](https://user-images.githubusercontent.com/22566105/158514613-3eb77435-2ea7-45d0-954f-03bc2b005fcd.png)
+
+
+
+
+
