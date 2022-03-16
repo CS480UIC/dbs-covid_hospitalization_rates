@@ -71,27 +71,27 @@ Analyzing the covid hospitalization rates for people ages 18-35, including vacci
 
 # CRUD for Bill:
 
-![image](https://user-images.githubusercontent.com/22566105/158514357-68d240bc-fa1c-46b1-b610-18e4e221dc56.png)
+![image](https://user-images.githubusercontent.com/22566105/158515692-ab3eef2d-7533-4cbf-852f-e119d6196147.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158514405-1d0da59e-bc23-4120-8d5f-17cfff382317.png)
+![image](https://user-images.githubusercontent.com/22566105/158515739-941da34a-1cb2-4dd8-acbc-29aa53c29613.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158514475-f3991a4c-078a-4670-a573-dd24e643b950.png)
+![image](https://user-images.githubusercontent.com/22566105/158515758-4e5fa4a4-526e-4adb-8b9c-366656b2d572.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158514497-615267fe-fd0f-46e7-b055-1ecbaaa05840.png)
+![image](https://user-images.githubusercontent.com/22566105/158515779-b7dff3c0-9159-4da0-9657-4d39f4f972fb.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158514519-929f44db-8a00-4b63-b504-2ea09d54a2f2.png)
+![image](https://user-images.githubusercontent.com/22566105/158515790-cbf5d1b7-8e23-4a82-b8f0-27b8002842bb.png)
 
 # CRUD for Hospital:
 
-![image](https://user-images.githubusercontent.com/22566105/158514613-3eb77435-2ea7-45d0-954f-03bc2b005fcd.png)
+![image](https://user-images.githubusercontent.com/22566105/158515720-2c294834-6e2c-4220-bc87-695868d3409d.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158514983-5d5ea076-9a56-4eb6-8325-7381d05bd6ff.png)
+![image](https://user-images.githubusercontent.com/22566105/158515815-bf06244f-18cd-4461-9a09-818e4c60173c.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158515000-228f5eb9-3e2e-4d26-b10b-a2f39b0924ba.png)
+![image](https://user-images.githubusercontent.com/22566105/158515827-dffa13de-7eeb-49ab-8f60-64b6ca810eb4.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158515019-d8926baa-1813-4b30-9a51-4d29ac2d511c.png)
+![image](https://user-images.githubusercontent.com/22566105/158515843-93b9ef34-87e4-469f-a8da-4fa66dbc7f5c.png)
 
-![image](https://user-images.githubusercontent.com/22566105/158515066-b9d9c113-dce7-4c4e-9c42-3e364e2bdfcb.png)
+![image](https://user-images.githubusercontent.com/22566105/158515859-14737b05-4245-4d4c-ac1b-ba68ec9bb642.png)
 
 
 
