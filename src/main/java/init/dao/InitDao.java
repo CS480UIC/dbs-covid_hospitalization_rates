@@ -104,5 +104,21 @@ public class InitDao {
 		return list;
 		
 	}
+
+
+	public void initialize() throws ClassNotFoundException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
+			
+			String sql = "create table test(id int)";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		
+	}
 		
 }
