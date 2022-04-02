@@ -34,3 +34,21 @@ CREATE VIEW suhabe_complex AS
         	SELECT condition_id, condition_name
         FROM patient_preexisting_conditions
         WHERE condition_name = 'diabetes');
+
+CREATE VIEW maseeh_simple AS
+    SELECT *
+    FROM bill
+    WHERE cost > 100
+    ORDER BY cost;
+
+CREATE VIEW maseeh_aggregate AS
+    SELECT AVG(cost)
+    FROM bill;
+
+CREATE VIEW maseeh_complex AS
+    SELECT cost, 
+    FROM bill
+    WHERE cost > (
+        SELECT AVG(cost)
+        FROM bill;
+    );
