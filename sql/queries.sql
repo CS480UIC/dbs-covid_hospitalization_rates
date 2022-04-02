@@ -50,5 +50,4 @@ CREATE VIEW maseeh_complex AS
     FROM bill
     WHERE cost > (
         SELECT AVG(cost)
-        FROM bill;
-    );
+        FROM bill);
