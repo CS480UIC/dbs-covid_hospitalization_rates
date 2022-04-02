@@ -1,5 +1,8 @@
 package init.dao;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,6 +11,8 @@ import java.sql.SQLException;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.ibatis.jdbc.ScriptRunner;
 
 import user.domain.User;
 
@@ -106,14 +111,18 @@ public class InitDao {
 	}
 
 
-	public void initialize() throws ClassNotFoundException {
+	public void initialize(InputStream input) throws ClassNotFoundException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "create table test(id int)";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.executeUpdate();
+			//Initialize the script runner
+	   		 ScriptRunner sr = new ScriptRunner(connect);
+	   		 //Creating a reader object
+	   		 Reader reader = new InputStreamReader(input);
+	   		 //Running the script
+	   		 sr.runScript(reader);
+			
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
