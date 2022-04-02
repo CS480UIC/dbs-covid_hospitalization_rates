@@ -46,7 +46,7 @@ CREATE VIEW maseeh_aggregate AS
     FROM bill;
 
 CREATE VIEW maseeh_complex AS
-    SELECT cost, 
+    SELECT cost 
     FROM bill
     WHERE cost > (
         SELECT AVG(cost)
