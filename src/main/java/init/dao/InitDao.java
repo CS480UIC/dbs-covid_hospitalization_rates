@@ -1,4 +1,4 @@
-package user.dao;
+package init.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,7 +16,7 @@ import user.domain.User;
 /**
  * DDL functions performed in database
  */
-public class UserDao {
+public class InitDao {
 	
 	/**
 	 * user name to connect to the database 
