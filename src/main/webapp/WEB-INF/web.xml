@@ -26,7 +26,7 @@
   
   
   
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>Entity1ServletUpdate</display-name>
     <servlet-name>Entity1ServletUpdate</servlet-name>
@@ -59,9 +59,8 @@
     <servlet-name>UserServletRegister</servlet-name>
     <url-pattern>/UserServletRegister</url-pattern>
   </servlet-mapping>
-  <servlet>
   
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>InitializeDB</display-name>
     <servlet-name>InitializeDB</servlet-name>
@@ -71,8 +70,8 @@
     <servlet-name>InitializeDB</servlet-name>
     <url-pattern>/InitializeDB</url-pattern>
   </servlet-mapping>
+
   <servlet>
-  
     <description></description>
     <display-name>UserServletLogin</display-name>
     <servlet-name>UserServletLogin</servlet-name>
