@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Preexisting Conditions</title>
+    <title>Read Conditions</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Read Preexisting Conditions</h1>
+  <h1>Read Conditions</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
@@ -32,7 +32,7 @@
 	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
 	<br/>
 	--%>
-	<input type="submit" value="Read Preexisting Conditions"/>
+	<input type="submit" value="Read Conditions"/>
 </form>
   </body>
 </html>

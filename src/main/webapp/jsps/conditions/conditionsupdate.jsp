@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Preexisting Conditions</title>
+    <title>Update Conditions</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,10 +24,10 @@
   <h1>Update</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Preexisting Conditions by Condition Name   :<input type="text" name="condition_name" value="${form.condition_name }"/>
+	Update Conditions by Condition Name   :<input type="text" name="condition_name" value="${form.condition_name }"/>
 	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
 	<br/>
-	<input type="submit" value="Update Preexisting Conditions"/>
+	<input type="submit" value="Update Conditions"/>
 </form>
   </body>
 </html>

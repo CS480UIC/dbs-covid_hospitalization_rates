@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Preexisting Conditions Create</title>
+    <title>Delete  Conditions</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,18 @@
   </head>
   
   <body>
-  <h1>Preexisting Conditions Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Patient ID    :<input type="text" name="patient_id" value="${form.patient_id }"/>
-	<span style="color: red; font-weight: 900">${errors.patient_id}</span>
-	<br/>
-	Conditions Name:<input type="text" name="condition_name" value="${form.condition_name }"/>
-	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
+  <h1>Delete Conditions</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="patient_id" value="${_conditions.patient_id }"/>
+	Patient ID: <input type="text" name="patient_id" value="${_conditions.patient_id }" disabled/>
 	<br/>
 	
-	<input type="submit" value="Create Preexisting Conditions"/>
+	Condition Name:<input type="text" name="condition_name" value="${_conditions.condition_name }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Conditions"/>
 </form>
-  </body>
+
+</body>
 </html>

@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Preexisting Conditions </h1>
+    <h1>CRUD operations for  Conditions </h1>
     <br>
-	<a href="<c:url value='/jsps/preexisting_conditions/preexistingconditionscreate.jsp'/>" target="_parent">Create Preexisting Conditions</a> |&nbsp; 
-	<a href="<c:url value='/jsps/preexisting_conditions/preexistingconditionsread.jsp'/>" target="_parent">Read Preexisting Conditions</a> |&nbsp;
-	<a href="<c:url value='/jsps/preexisting_conditions/preexistingconditionsupdate.jsp'/>" target="_parent">Update Preexisting Conditions</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/preexisting_conditions/preexistingconditionsdelete.jsp'/>" target="_parent">Delete Preexisting Conditions</a>	
+	<a href="<c:url value='/jsps/conditions/conditionscreate.jsp'/>" target="_parent">Create Conditions</a> |&nbsp; 
+	<a href="<c:url value='/jsps/conditions/conditionsread.jsp'/>" target="_parent">Read Conditions</a> |&nbsp;
+	<a href="<c:url value='/jsps/conditions/conditionsupdate.jsp'/>" target="_parent">Update Conditions</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/conditions/conditionsdelete.jsp'/>" target="_parent">Delete Conditions</a>	
 	    
   </body>
 </html>

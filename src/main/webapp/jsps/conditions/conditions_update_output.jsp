@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Country</title>
+    <title>Delete Conditions</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,27 +21,27 @@
   </head>
   
   <body>
-  <h1>Update Country</h1>
+  <h1>Update Conditions</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Country ID    :<input type="text" name="country_id1" value="${country.country_id1 }" disabled/>
+
+	Patient ID:    :<input type="text" name="patient_id1" value="${conditions.patient_id1 }" disabled/>
+	<br/>
+	Condition Name:<input type="text" name="condition_name1" value="${conditions.condition_name1 }" disabled/>
 	<br/>
 	
-	Country Name:<input type="text" name="country_name1" value="${country.country_name1 }" disabled />
-	<br/>
-	Population	：<input type="text" name="population1" value="${country.population1 }" disabled/>
-	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="country_id" value="${country.country_id }"/>
-	Country Name:<input type="text" name="country_name" value="${form.country_name }"/>
-	<span style="color: red; font-weight: 900">${errors.country_name }</span>
+				<input type="hidden" name="condition.name" value="${conditions.condition_name }"/>
+	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Population：<input type="text" name="population" value="${form.population }"/>
-	<span style="color: red; font-weight: 900">${errors.population }</span>
+	Condition Name:<input type="text" name="condition_name" value="${form.condition_name }"/>
+	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
 	<br/>
+	
 	<input type="submit" value="Update Country"/>
 </form>
 

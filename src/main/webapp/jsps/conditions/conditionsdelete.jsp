@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Preexisting Conditions Output</title>
+    <title>Delete Conditions</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,13 @@
   </head>
   
   <body>
-  <h1>Read Preexisting Conditions Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Patient ID:    :<input type="text" name="patient_id" value="${preexisting_conditions.patient_id }" disabled/>
+  <h1>Delete Conditions by Condition Name</h1>
+<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	Delete Condition Name   :<input type="text" name="condition_name" value="${form.condition_name }"/>
+	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
 	<br/>
-	Condition Name:<input type="text" name="condition_name" value="${preexisting_conditions.condition_name }" disabled/>
-	<br/>
+	<input type="submit" value="Delete Conditions"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>
