@@ -31,6 +31,8 @@
 	
 	Condition Name:<input type="text" name="condition_name" value="${_conditions.condition_name }" disabled/>
 	<br/>
+	Condition ID:<input type="text" name="condition_id" value="${_conditions.condition_id }" disabled/>
+	<br/>
 	<input type="submit" value="Delete Conditions"/>
 </form>
 

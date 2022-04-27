@@ -28,6 +28,8 @@
 	<br/>
 	Condition Name:<input type="text" name="condition_name" value="${conditions.condition_name }" disabled/>
 	<br/>
+	Condition ID:<input type="text" name="condition_id" value="${conditions.condition_id }" disabled/>
+	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

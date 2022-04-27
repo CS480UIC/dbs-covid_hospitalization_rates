@@ -22,12 +22,15 @@
   
   <body>
   <h1> Conditions Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/ConditionsServletCreate'/>" method="post">
 	Patient ID    :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id}</span>
 	<br/>
 	Conditions Name:<input type="text" name="condition_name" value="${form.condition_name }"/>
 	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
+	<br/>
+	Condition ID:<input type="text" name="condition_id" value="${form.condition_id }"/>
+	<span style="color: red; font-weight: 900">${errors.condition_id }</span>
 	<br/>
 	
 	<input type="submit" value="Create Conditions"/>

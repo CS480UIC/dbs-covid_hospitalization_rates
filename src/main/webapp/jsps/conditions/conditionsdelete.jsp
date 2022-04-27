@@ -21,11 +21,11 @@
   </head>
   
   <body>
-  <h1>Delete Conditions by Condition Name</h1>
+  <h1>Delete Conditions by Patient ID</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Condition Name   :<input type="text" name="condition_name" value="${form.condition_name }"/>
-	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
+	Delete Condition   :<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	<input type="submit" value="Delete Conditions"/>
 </form>
