@@ -93,11 +93,11 @@ public class BillDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			String sql = "UPDATE bill SET patient_id = ?, cost = ? where bill_id = ?;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+		    preparestatement.setInt(1,form.getPatient_id());
+		    preparestatement.setInt(2,form.getCost());
+		    preparestatement.setInt(3,form.getBill_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

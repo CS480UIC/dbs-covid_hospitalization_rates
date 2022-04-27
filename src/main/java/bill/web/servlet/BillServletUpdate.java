@@ -41,13 +41,13 @@ public class BillServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		BillDao entity1dao = new BillDao();
-		Bill entity1 = null;
+		BillDao billdao = new BillDao();
+		Bill bill = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCountryID(request.getParameter("username"));
+				bill = billdao.findByBillID(Integer.parseInt(request.getParameter("bill_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +56,14 @@ public class BillServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(bill.getPatient_id()!=null){
+				request.setAttribute("bill", bill);
+				request.getRequestDispatcher("/jsps/bill/bill_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Bill not found");
+				request.getRequestDispatcher("/jsps/bill/bill_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +76,13 @@ public class BillServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			
+			form.setBill_id(Integer.parseInt(info.get(0)));
+			form.setCost(Integer.parseInt(info.get(1)));
+			form.setPatient_id(Integer.parseInt(info.get(2)));		
 
 			try {
-				entity1dao.update(form);
+				billdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +91,8 @@ public class BillServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Bill Updated");
+			request.getRequestDispatcher("/jsps/bill/bill_read_output.jsp").forward(request, response);
 		}
 	}
 }
