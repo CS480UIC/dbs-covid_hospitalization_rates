@@ -44,14 +44,13 @@
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/employee/menu.jsp'/>" target="body">CRUD Employee</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/room/menu.jsp'/>" target="body">CRUD Room</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/bill/menu.jsp'/>" target="body">CRUD Bill</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/hospital/menu.jsp'/>" target="body">CRUD Hospital</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/patient/menu.jsp'/>" target="body">CRUD Patient</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/country/menu.jsp'/>" target="body">CRUD Country</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/conditions/menu.jsp'/>" target="body">CRUD Preexisting Conditions</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/conditions/menu.jsp'/>" target="body">CRUD Conditions</a> |&nbsp;&nbsp;
 
 
 		</c:otherwise>

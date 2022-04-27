@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="country_id" value="${country.country_id }"/>
+		<input type="hidden" name="country_id" value="${country.countryID }"/>
 	Country ID: <input type="text" name="country_id" value="${country.country_id }" disabled/>
 	<br/>
 	

@@ -36,12 +36,12 @@ public class CountryServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		CountryDao entity1Dao = new CountryDao();
-		Country entity1 = null;
+		CountryDao countryDao = new CountryDao();
+		Country country = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByCountryID(request.getParameter("username"));
+				country = countryDao.findByCountryID(request.getParameter("country_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class CountryServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(country.getCountryID()!=null){
+						System.out.println(country);
+						request.setAttribute("country", country);
+						request.getRequestDispatcher("/jsps/country/country_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Country not found");
+				request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				countryDao.delete(request.getParameter("country_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +71,8 @@ public class CountryServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Country Deleted");
+			request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
 		}
 	}
 }
