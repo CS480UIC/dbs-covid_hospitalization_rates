@@ -23,7 +23,7 @@
   <body>
   <h1>Delete Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/billServletDelete'/>" method="post">
+<form action="<c:url value='/BillServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="bill_id" value="${bill.bill_id }"/>
 	Bill ID    :<input type="text" name="bill_id" value="${bill.bill_id }" disabled/>

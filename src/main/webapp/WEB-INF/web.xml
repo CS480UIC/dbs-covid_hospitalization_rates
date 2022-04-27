@@ -148,6 +148,17 @@
     <servlet-name>HospitalServletRead</servlet-name>
     <url-pattern>/HospitalServletRead</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>HospitalServletDelete</display-name>
+    <servlet-name>HospitalServletDelete</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletDelete</servlet-name>
+    <url-pattern>/HospitalServletDelete</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <description></description>
@@ -184,6 +195,17 @@
   
   <servlet>
     <description></description>
+    <display-name>BillServletDelete</display-name>
+    <servlet-name>BillServletDelete</servlet-name>
+    <servlet-class>bill.web.servlet.BillServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BillServletDelete</servlet-name>
+    <url-pattern>/BillServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>EmployeeServletCreate</display-name>
     <servlet-name>EmployeeServletCreate</servlet-name>
     <servlet-class>employee.web.servlet.EmployeeServletCreate</servlet-class>
@@ -202,6 +224,17 @@
   <servlet-mapping>
     <servlet-name>EmployeeServletRead</servlet-name>
     <url-pattern>/EmployeeServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>EmployeeServletDelete</display-name>
+    <servlet-name>EmployeeServletDelete</servlet-name>
+    <servlet-class>employee.web.servlet.EmployeeServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeServletDelete</servlet-name>
+    <url-pattern>/EmployeeServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -224,6 +257,17 @@
   <servlet-mapping>
     <servlet-name>PatientServletRead</servlet-name>
     <url-pattern>/PatientServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>PatientServletDelete</display-name>
+    <servlet-name>PatientServletDelete</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletDelete</servlet-name>
+    <url-pattern>/PatientServletDelete</url-pattern>
   </servlet-mapping>
   
  
@@ -251,6 +295,17 @@
   
   <servlet>
     <description></description>
+    <display-name>RoomServletDelete</display-name>
+    <servlet-name>RoomServletDelete</servlet-name>
+    <servlet-class>room.web.servlet.RoomServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomServletDelete</servlet-name>
+    <url-pattern>/RoomServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>ConditionsServletCreate</display-name>
     <servlet-name>ConditionsServletCreate</servlet-name>
     <servlet-class>conditions.web.servlet.ConditionsServletCreate</servlet-class>
@@ -270,6 +325,17 @@
   <servlet-mapping>
     <servlet-name>ConditionsServletRead</servlet-name>
     <url-pattern>/ConditionsServletRead</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ConditionsServletDelete</display-name>
+    <servlet-name>ConditionsServletDelete</servlet-name>
+    <servlet-class>conditions.web.servlet.ConditionsServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConditionsServletDelete</servlet-name>
+    <url-pattern>/ConditionsServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>

@@ -36,12 +36,12 @@ public class PatientServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		PatientDao entity1Dao = new PatientDao();
-		Patient entity1 = null;
+		PatientDao patientDao = new PatientDao();
+		Patient patient = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByCountryID(request.getParameter("username"));
+				patient = patientDao.findByPatientID(Integer.parseInt(request.getParameter("patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class PatientServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(patient.getPatient_id()!=null){
+						System.out.println(patient);
+						request.setAttribute("patient", patient);
+						request.getRequestDispatcher("/jsps/patient/patient_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Patient not found");
+				request.getRequestDispatcher("/jsps/patient/patient_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				patientDao.delete(request.getParameter("patient_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +71,8 @@ public class PatientServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Patient Deleted");
+			request.getRequestDispatcher("/jsps/patient/patient_read_output.jsp").forward(request, response);
 		}
 	}
 }

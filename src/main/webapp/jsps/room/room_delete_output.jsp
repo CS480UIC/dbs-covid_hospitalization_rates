@@ -23,10 +23,10 @@
   <body>
   <h1>Delete Room</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/RoomServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="roomnumber" value="${room.roomnumber }"/>
-	Room Number    :<input type="text" name="roomnumber" value="${room.roomnumber }" disabled/>
+		<input type="hidden" name="room_number" value="${room.room_number }"/>
+	Room Number    :<input type="text" name="room_number" value="${room.room_number }" disabled/>
 	<br/>
 	
 	Patient ID:<input type="text" name="patient_id" value="${room.patient_id }" disabled/>
