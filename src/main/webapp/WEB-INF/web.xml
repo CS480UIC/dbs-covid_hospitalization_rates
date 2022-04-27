@@ -127,6 +127,17 @@
     <url-pattern>/BillServletCreate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>EmployeeServletCreate</display-name>
+    <servlet-name>EmployeeServletCreate</servlet-name>
+    <servlet-class>employee.web.servlet.EmployeeServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeServletCreate</servlet-name>
+    <url-pattern>/EmployeeServletCreate</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
     <description></description>

@@ -1,4 +1,4 @@
-package hospital.dao;
+package employee.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,12 +12,12 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import hospital.domain.Hospital;
+import employee.domain.Employee;
 
 /**
  * DDL functions performed in database
  */
-public class HospitalDao {
+public class EmployeeDao {
 	
 	/**
 	 * user name to connect to the database 
@@ -29,30 +29,30 @@ public class HospitalDao {
 	 */
 	private String MySQL_password = "password0"; //TODO change password
 
-	public Hospital findByHospitalID(Integer hospitalID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Hospital hospital = new Hospital();
+	public Employee findByEmployeeID(Integer employeeID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Employee employee = new Employee();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
-			String sql = "select * from hospital where hospital_id=?";
-		    //String sql = "select * from hospital where `Hospital ID`=?";
+		    String sql = "select * from employee where employee_id=?";
+		    //String sql = "select * from employee where `Employee ID`=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,hospitalID);
+		    preparestatement.setInt(1,employeeID);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	Integer hospital_id = Integer.parseInt(resultSet.getString("hospital_id"));
-		    	if(hospital_id.equals(hospitalID)){
-		    		hospital.setHospital_id(Integer.parseInt(resultSet.getString("hospital_id")));
-		    		hospital.setHospital_address(resultSet.getString("hospital_address"));
-		    		hospital.setHospital_name(resultSet.getString("hospital_name"));		
+		    	Integer employee_id = Integer.parseInt(resultSet.getString("employee_id"));
+		    	if(employee_id.equals(employeeID)){
+		    		employee.setEmployee_id(Integer.parseInt(resultSet.getString("employee_id")));
+		    		employee.setName(resultSet.getString("name"));
+		    		employee.setDepartment(resultSet.getString("department"));		
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return hospital;
+		return employee;
 	}	
 	
 	/**
@@ -63,17 +63,17 @@ public class HospitalDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Hospital form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Employee form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "insert into hospital (hospital_id, hospital_address, hospital_name) values(?,?,?)";
-			//String sql = "insert into hospital (`Hospital ID`, `Hospital Address`, `Hospital Name`) values(?,?,?)";
+			String sql = "insert into employee (employee_id, name, department) values(?,?,?)";
+			//String sql = "insert into employee (`Employee ID`, `Name`, `Department`) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,form.getHospital_id());
-		    preparestatement.setString(2,form.getHospital_address());
-		    preparestatement.setString(3,form.getHospital_name());
+		    preparestatement.setInt(1,form.getEmployee_id());
+		    preparestatement.setString(2,form.getName());
+		    preparestatement.setString(3,form.getDepartment());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -88,7 +88,7 @@ public class HospitalDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Hospital form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
