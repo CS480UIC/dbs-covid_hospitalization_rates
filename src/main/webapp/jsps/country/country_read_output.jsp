@@ -24,7 +24,7 @@
   <h1>Read Country Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Country ID:    :<input type="text" name="country_id" value="${country.country_id }" disabled/>
+	Country ID: <input type="text" name="country_id" value="${country.countryID }" disabled/>
 	<br/>
 	Country Name:<input type="text" name="country_name" value="${country.country_name }" disabled/>
 	<br/>

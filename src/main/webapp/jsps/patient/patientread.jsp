@@ -23,7 +23,7 @@
   <body>
   <h1>Read Patient</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/PatientServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	Patient ID    :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>

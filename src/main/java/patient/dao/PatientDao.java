@@ -45,7 +45,7 @@ public class PatientDao {
 		    		patient.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
 		    		patient.setAge(Integer.parseInt(resultSet.getString("age")));
 		    		patient.setVaccination_status(resultSet.getString("vaccination_status"));
-		    		patient.setHospitalization_date(java.sql.Date.valueOf(resultSet.getString("hospitalization_date")));
+		    		patient.setHospitalization_date(resultSet.getString("hospitalization_date"));
 		    	}
 		    }
 		    connect.close();

@@ -34,7 +34,7 @@ public class CountryDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
-		    String sql = "select * from country where `Country ID`=?";
+		    String sql = "select * from country where `country_id`=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,countryID);
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -44,7 +44,7 @@ public class CountryDao {
 		    	if(country_id.equals(countryID)){
 		    		country.setCountry_name(resultSet.getString("country_name"));
 		    		country.setCountryID(resultSet.getString("country_id"));
-		    		country.setPopulation(Integer.parseInt("population"));
+		    		country.setPopulation(Integer.parseInt(resultSet.getString("population")));
 		    	}
 		    }
 		    connect.close();
@@ -67,7 +67,7 @@ public class CountryDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "insert into country (`Country ID`, `Country Name`, `Population`) values(?,?,?)";
+			String sql = "insert into country (`country_id`, `country_name`, `population`) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getCountryID());
 		    preparestatement.setString(2,form.getCountry_name());

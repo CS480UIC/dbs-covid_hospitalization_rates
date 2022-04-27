@@ -32,7 +32,7 @@
 	Vaccination Status:<input type="text" name="vaccination_status" value="${form.vaccination_status }"/>
 	<span style="color: red; font-weight: 900">${errors.vaccination_status }</span>
 	<br/>
-	Hospitalization Date	：<input type="text" name="hospitalization_date" value="${form.hospitalization_date }"/>
+	Hospitalization Date (yyyy-mm-dd)	：<input type="text" name="hospitalization_date" value="${form.hospitalization_date }"/>
 	<span style="color: red; font-weight: 900">${errors.hospitalization_date }</span>
 	<br/>
 	<input type="submit" value="Create Patient"/>

@@ -23,7 +23,7 @@
   <body>
   <h1>Read hospital</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/hospitalServletRead'/>" method="post">
+<form action="<c:url value='/HospitalServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	Hospital ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>

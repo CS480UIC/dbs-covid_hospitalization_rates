@@ -37,11 +37,11 @@ public class ConditionsServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Conditions entity1 = null;
-		ConditionsDao entity1Dao = new ConditionsDao();
+		Conditions conditions = null;
+		ConditionsDao conditionsDao = new ConditionsDao();
 		
 		try {
-			entity1 = entity1Dao.findByCountryID(request.getParameter("username"));
+			conditions = conditionsDao.findByPatientID(Integer.parseInt(request.getParameter("patient_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class ConditionsServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(conditions.getPatient_id()!=null){
+					System.out.println(conditions);
+					request.setAttribute("conditions", conditions);
+					request.getRequestDispatcher("/jsps/conditions/conditions_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Condition not found");
+			request.getRequestDispatcher("/jsps/conditions/conditions_read_output.jsp").forward(request, response);
 		}
 	}
 }

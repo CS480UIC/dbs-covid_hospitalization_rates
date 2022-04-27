@@ -44,7 +44,7 @@ public class EmployeeDao {
 		    	Integer employee_id = Integer.parseInt(resultSet.getString("employee_id"));
 		    	if(employee_id.equals(employeeID)){
 		    		employee.setEmployee_id(Integer.parseInt(resultSet.getString("employee_id")));
-		    		employee.setName(resultSet.getString("name"));
+		    		employee.setName(resultSet.getString("employee_name"));
 		    		employee.setDepartment(resultSet.getString("department"));		
 		    	}
 		    }

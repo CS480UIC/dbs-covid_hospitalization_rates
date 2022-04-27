@@ -104,6 +104,17 @@
     <servlet-name>CountryServletCreate</servlet-name>
     <url-pattern>/CountryServletCreate</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CountryServletRead</display-name>
+    <servlet-name>CountryServletRead</servlet-name>
+    <servlet-class>country.web.servlet.CountryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountryServletRead</servlet-name>
+    <url-pattern>/CountryServletRead</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <description></description>
@@ -114,6 +125,17 @@
   <servlet-mapping>
     <servlet-name>HospitalServletCreate</servlet-name>
     <url-pattern>/HospitalServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>HospitalServletRead</display-name>
+    <servlet-name>HospitalServletRead</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletRead</servlet-name>
+    <url-pattern>/HospitalServletRead</url-pattern>
   </servlet-mapping>
 
   <servlet>
@@ -129,6 +151,17 @@
   
   <servlet>
     <description></description>
+    <display-name>BillServletRead</display-name>
+    <servlet-name>BillServletRead</servlet-name>
+    <servlet-class>bill.web.servlet.BillServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BillServletRead</servlet-name>
+    <url-pattern>/BillServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>EmployeeServletCreate</display-name>
     <servlet-name>EmployeeServletCreate</servlet-name>
     <servlet-class>employee.web.servlet.EmployeeServletCreate</servlet-class>
@@ -140,6 +173,17 @@
   
   <servlet>
     <description></description>
+    <display-name>EmployeeServletRead</display-name>
+    <servlet-name>EmployeeServletRead</servlet-name>
+    <servlet-class>employee.web.servlet.EmployeeServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeServletRead</servlet-name>
+    <url-pattern>/EmployeeServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>PatientServletCreate</display-name>
     <servlet-name>PatientServletCreate</servlet-name>
     <servlet-class>patient.web.servlet.PatientServletCreate</servlet-class>
@@ -147,6 +191,17 @@
   <servlet-mapping>
     <servlet-name>PatientServletCreate</servlet-name>
     <url-pattern>/PatientServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>PatientServletRead</display-name>
+    <servlet-name>PatientServletRead</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletRead</servlet-name>
+    <url-pattern>/PatientServletRead</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -171,6 +226,16 @@
     <url-pattern>/RoomServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>ConditionsServletRead</display-name>
+    <servlet-name>ConditionsServletRead</servlet-name>
+    <servlet-class>conditions.web.servlet.ConditionsServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConditionsServletRead</servlet-name>
+    <url-pattern>/ConditionsServletRead</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
