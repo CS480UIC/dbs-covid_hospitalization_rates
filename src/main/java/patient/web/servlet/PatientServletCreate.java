@@ -50,9 +50,10 @@ public class PatientServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setPatient_id(Integer.parseInt(info.get(0)));
+		form.setAge(Integer.parseInt(info.get(1)));
+		form.setVaccination_status(info.get(2));
+		form.setHospitalization_date(java.sql.Date.valueOf(info.get(3)));
 		
 		try {
 			entity1service.create(form);

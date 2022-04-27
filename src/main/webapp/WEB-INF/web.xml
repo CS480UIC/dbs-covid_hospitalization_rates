@@ -138,6 +138,17 @@
     <url-pattern>/EmployeeServletCreate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>PatientServletCreate</display-name>
+    <servlet-name>PatientServletCreate</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletCreate</servlet-name>
+    <url-pattern>/PatientServletCreate</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
     <description></description>

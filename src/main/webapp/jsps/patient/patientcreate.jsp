@@ -22,9 +22,12 @@
   
   <body>
   <h1>Patient Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/PatientServletCreate'/>" method="post">
 	Patient ID    :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id}</span>
+	<br/>
+	Age    :<input type="text" name="age" value="${form.age }"/>
+	<span style="color: red; font-weight: 900">${errors.age}</span>
 	<br/>
 	Vaccination Status:<input type="text" name="vaccination_status" value="${form.vaccination_status }"/>
 	<span style="color: red; font-weight: 900">${errors.vaccination_status }</span>

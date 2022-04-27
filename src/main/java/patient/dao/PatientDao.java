@@ -1,6 +1,4 @@
 package patient.dao;
-// test
-// test 2
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -70,8 +68,8 @@ public class PatientDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "insert into patient (patient_id, age, vaccination_status, hospitalization_date) values(?,?,?)";
-			// String sql = "insert into patient (patient_id, age, vaccination_status, hospitalization_date) values(?,?,?)";
+			String sql = "insert into patient (patient_id, age, vaccination_status, hospitalization_date) values(?,?,?,?)";
+			// String sql = "insert into patient (patient_id, age, vaccination_status, hospitalization_date) values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getPatient_id());
 		    preparestatement.setInt(2,form.getAge());

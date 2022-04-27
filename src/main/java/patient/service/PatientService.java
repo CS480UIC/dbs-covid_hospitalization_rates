@@ -21,27 +21,8 @@ public class PatientService {
 	 */
 	public void create(Patient form) throws PatientException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Patient entity1 = entity1Dao.findByUsername(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new PatientException("This user name has been registered!");
+		Patient entity1 = entity1Dao.findByPatientID(form.getPatient_id());
+		if(entity1.getPatient_id()!=null && entity1.getPatient_id().equals(form.getPatient_id())) throw new PatientException("This patient has been registered!");
 		entity1Dao.add(form);
-	}
-	/**
-	 * Login function
-	 * @param form
-	 * @return
-	 * @throws InitException 
-	 * @throws ClassNotFoundException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 */
-	public void login(Patient form) throws PatientException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Patient user = entity1Dao.findByUsername(form.getUsername());
-		if(user.getUsername()==null) throw new PatientException("The user is not in the database");
-		
-		String password = user.getPassword();
-		
-		if(password!=null && !password.equals(form.getPassword()))
-			throw new PatientException(" The password is not right");
-		
 	}
 }
