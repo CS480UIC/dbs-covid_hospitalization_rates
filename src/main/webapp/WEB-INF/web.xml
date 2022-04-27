@@ -171,6 +171,17 @@
     <url-pattern>/BillServletRead</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>BillServletUpdate</display-name>
+    <servlet-name>BillServletUpdate</servlet-name>
+    <servlet-class>bill.web.servlet.BillServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BillServletUpdate</servlet-name>
+    <url-pattern>/BillServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>EmployeeServletCreate</display-name>

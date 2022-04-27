@@ -36,7 +36,7 @@
 <form action="<c:url value='/billServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }" disabled/>
-		<span style="color: red; font-weight: 900">${errors.name }</span>
+		<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
 	Cost    :<input type="text" name="cost" value="${form.cost }" disabled/>
 		<span style="color: red; font-weight: 900">${errors.cost }</span>
