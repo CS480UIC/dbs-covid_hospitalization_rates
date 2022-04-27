@@ -25,7 +25,7 @@
 <form action="<c:url value='/CountryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete ID:<input type="text" name="country_id" value="${form.countryID }"/>
-	<span style="color: red; font-weight: 900">${errors.country_id }</span>
+	<span style="color: red; font-weight: 900">${errors.countryID }</span>
 	<br/>
 	<input type="submit" value="Delete Country"/>
 </form>

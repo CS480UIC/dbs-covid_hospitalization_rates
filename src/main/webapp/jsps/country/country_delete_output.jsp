@@ -23,10 +23,10 @@
   <body>
   <h1>Delete Country</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/CountryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="country_id" value="${country.countryID }"/>
-	Country ID: <input type="text" name="country_id" value="${country.country_id }" disabled/>
+	Country ID: <input type="text" name="country_id" value="${country.countryID }" disabled/>
 	<br/>
 	
 	Country Name:<input type="text" name="country_name" value="${country.country_name }" disabled/>

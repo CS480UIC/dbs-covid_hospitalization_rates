@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Employee by ID</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/EmployeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Employee by ID   :<input type="text" name="employee_id" value="${form.employee_id }"/>
 	<span style="color: red; font-weight: 900">${errors.employee_id }</span>

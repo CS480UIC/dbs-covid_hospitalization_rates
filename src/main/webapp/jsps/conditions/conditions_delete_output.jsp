@@ -23,15 +23,15 @@
   <body>
   <h1>Delete Conditions</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/ConditionsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="patient_id" value="${_conditions.patient_id }"/>
-	Patient ID: <input type="text" name="patient_id" value="${_conditions.patient_id }" disabled/>
+		<input type="hidden" name="patient_id" value="${conditions.patient_id }"/>
+	Patient ID: <input type="text" name="patient_id" value="${conditions.patient_id }" disabled/>
 	<br/>
 	
-	Condition Name:<input type="text" name="condition_name" value="${_conditions.condition_name }" disabled/>
+	Condition Name:<input type="text" name="condition_name" value="${conditions.condition_name }" disabled/>
 	<br/>
-	Condition ID:<input type="text" name="condition_id" value="${_conditions.condition_id }" disabled/>
+	Condition ID:<input type="text" name="condition_id" value="${conditions.condition_id }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Conditions"/>
 </form>

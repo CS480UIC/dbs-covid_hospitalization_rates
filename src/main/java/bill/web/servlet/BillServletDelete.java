@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import bill.dao.BillDao;
+import bill.domain.Bill;
 
 
 /**
@@ -36,12 +36,12 @@ public class BillServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1Dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		BillDao billDao = new BillDao();
+		Bill bill = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByCountryID(request.getParameter("username"));
+				bill = billDao.findByBillID(Integer.parseInt(request.getParameter("bill_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class BillServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(bill.getBill_id()!=null){
+						System.out.println(bill);
+						request.setAttribute("bill", bill);
+						request.getRequestDispatcher("/jsps/bill/bill_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Bill not found");
+				request.getRequestDispatcher("/jsps/bill/bill_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				billDao.delete(request.getParameter("bill_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +71,8 @@ public class BillServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Bill Deleted");
+			request.getRequestDispatcher("/jsps/bill/bill_read_output.jsp").forward(request, response);
 		}
 	}
 }

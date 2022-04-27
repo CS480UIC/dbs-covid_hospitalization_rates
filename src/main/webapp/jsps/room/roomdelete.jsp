@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Room by Number</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/RoomServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Room   :<input type="text" name="room_number" value="${form.room_number }"/>
 	<span style="color: red; font-weight: 900">${errors.room_number }</span>
