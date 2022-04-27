@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: localhost    Database: covid_hospitalization_rates
+-- Host: 127.0.0.1    Database: covid_hospitalization_rates
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -196,28 +196,28 @@ LOCK TABLES `patient` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `patient_preexisting_conditions`
+-- Table structure for table `patient_conditions`
 --
 
-DROP TABLE IF EXISTS `patient_preexisting_conditions`;
+DROP TABLE IF EXISTS `patient_conditions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `patient_preexisting_conditions` (
+CREATE TABLE `patient_conditions` (
   `patient_id` int unsigned DEFAULT NULL,
   `condition_name` varchar(100) DEFAULT NULL,
   `condition_id` varchar(10) DEFAULT NULL,
   UNIQUE KEY `patient_id` (`patient_id`),
-  CONSTRAINT `patient_preexisting_conditions_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `patient_conditions_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `patient_preexisting_conditions`
+-- Dumping data for table `patient_conditions`
 --
 
-LOCK TABLES `patient_preexisting_conditions` WRITE;
-/*!40000 ALTER TABLE `patient_preexisting_conditions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `patient_preexisting_conditions` ENABLE KEYS */;
+LOCK TABLES `patient_conditions` WRITE;
+/*!40000 ALTER TABLE `patient_conditions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `patient_conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -248,6 +248,30 @@ LOCK TABLES `room` WRITE;
 /*!40000 ALTER TABLE `room` DISABLE KEYS */;
 /*!40000 ALTER TABLE `room` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `username` varchar(16) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `email` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES ('test2','test2','test2'),('test3','test3',''),('test','test','test'),('test5','test5','test5');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -258,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-01 22:19:37
+-- Dump completed on 2022-04-26 18:01:32
