@@ -33,15 +33,15 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/billServletUpdate'/>" method="post">
+<form action="<c:url value='/BillServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }" disabled/>
+	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }" />
 		<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
-	Cost    :<input type="text" name="cost" value="${form.cost }" disabled/>
+	Cost    :<input type="text" name="cost" value="${form.cost }" />
 		<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>
-	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }" disabled/>
+	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }" />
 		<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	<input type="submit" value="Update bill"/>

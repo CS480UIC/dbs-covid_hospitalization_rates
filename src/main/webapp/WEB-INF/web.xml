@@ -182,7 +182,7 @@
     <url-pattern>/BillServletRead</url-pattern>
   </servlet-mapping>
   
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>BillServletUpdate</display-name>
     <servlet-name>BillServletUpdate</servlet-name>

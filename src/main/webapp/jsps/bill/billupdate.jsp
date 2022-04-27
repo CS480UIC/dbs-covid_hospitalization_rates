@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/billServletUpdate'/>" method="post">
+<form action="<c:url value='/BillServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update Bill by ID : <input type="text" name="bill_id" value="${form.bill_id }"/>
 	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
