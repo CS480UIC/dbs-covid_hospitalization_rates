@@ -22,7 +22,7 @@
   
   <body>
   <h1>Create Bill</h1>
-<form action="<c:url value='/billServletCreate'/>" method="post">
+<form action="<c:url value='/BillServletCreate'/>" method="post">
 	Bill ID  :  <input type="text" name="bill_id" value="${form.bill_id }"/>
 	<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>

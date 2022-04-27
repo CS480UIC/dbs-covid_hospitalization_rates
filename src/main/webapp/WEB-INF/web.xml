@@ -104,6 +104,28 @@
     <servlet-name>CountryServletCreate</servlet-name>
     <url-pattern>/CountryServletCreate</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>HospitalServletCreate</display-name>
+    <servlet-name>HospitalServletCreate</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletCreate</servlet-name>
+    <url-pattern>/HospitalServletCreate</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>BillServletCreate</display-name>
+    <servlet-name>BillServletCreate</servlet-name>
+    <servlet-class>bill.web.servlet.BillServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BillServletCreate</servlet-name>
+    <url-pattern>/BillServletCreate</url-pattern>
+  </servlet-mapping>
   
   
   <servlet>

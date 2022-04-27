@@ -22,7 +22,7 @@
   
   <body>
   <h1>Create Hospital</h1>
-<form action="<c:url value='/hospitalServletCreate'/>" method="post">
+<form action="<c:url value='/HospitalServletCreate'/>" method="post">
 	Hospital ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>

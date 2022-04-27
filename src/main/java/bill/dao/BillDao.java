@@ -1,4 +1,4 @@
-package country.dao;
+package bill.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,12 +12,12 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import country.domain.Country;
+import bill.domain.Bill;
 
 /**
  * DDL functions performed in database
  */
-public class CountryDao {
+public class BillDao {
 	
 	/**
 	 * user name to connect to the database 
@@ -29,49 +29,50 @@ public class CountryDao {
 	 */
 	private String MySQL_password = "password0"; //TODO change password
 
-	public Country findByCountryID(String countryID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Country country = new Country();
+	public Bill findByBillID(Integer billID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Bill bill = new Bill();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
-		    String sql = "select * from country where `Country ID`=?";
+		    String sql = "select * from bill where bill_id=?";
+		    //String sql = "select * from bill where `Bill ID`=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,countryID);
+		    preparestatement.setInt(1,billID);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String country_id = resultSet.getString("country_id");
-		    	if(country_id.equals(countryID)){
-		    		country.setCountry_name(resultSet.getString("country_name"));
-		    		country.setCountryID(resultSet.getString("country_id"));
-		    		country.setPopulation(Integer.parseInt("population"));
+		    	Integer bill_id = Integer.parseInt(resultSet.getString("bill_id"));
+		    	if(bill_id.equals(billID)){
+		    		bill.setBill_id(Integer.parseInt(resultSet.getString("bill_id")));
+		    		bill.setCost(Integer.parseInt(resultSet.getString("cost")));
+		    		bill.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));		
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return country;
+		return bill;
 	}	
 	
 	/**
-	 * insert Country
+	 * insert Entity1
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Country form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Bill form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "insert into country (`Country ID`, `Country Name`, `Population`) values(?,?,?)";
+			String sql = "insert into entity1 values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getCountryID());
-		    preparestatement.setString(2,form.getCountry_name());
-		    preparestatement.setInt(3,form.getPopulation());
+		    preparestatement.setString(1,form.getUsername());
+		    preparestatement.setString(2,form.getPassword());
+		    preparestatement.setString(3,form.getEmail());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -86,7 +87,7 @@ public class CountryDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Country form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Bill form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
