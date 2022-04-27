@@ -23,7 +23,7 @@
   <body>
   <h1>Read Bill</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/billServletRead'/>" method="post">
+<form action="<c:url value='//BillServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	Bill ID  :  <input type="text" name="bill_id" value="${form.bill_id }"/>
 	<span style="color: red; font-weight: 900">${errors.bill_id }</span>

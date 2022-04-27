@@ -44,7 +44,7 @@ public class EmployeeDao {
 		    	Integer employee_id = Integer.parseInt(resultSet.getString("employee_id"));
 		    	if(employee_id.equals(employeeID)){
 		    		employee.setEmployee_id(Integer.parseInt(resultSet.getString("employee_id")));
-		    		employee.setName(resultSet.getString("name"));
+		    		employee.setName(resultSet.getString("employee_name"));
 		    		employee.setDepartment(resultSet.getString("department"));		
 		    	}
 		    }
@@ -68,7 +68,7 @@ public class EmployeeDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "insert into employee (employee_id, name, department) values(?,?,?)";
+			String sql = "insert into employee (employee_id, employee_name, department) values(?,?,?)";
 			//String sql = "insert into employee (`Employee ID`, `Name`, `Department`) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getEmployee_id());

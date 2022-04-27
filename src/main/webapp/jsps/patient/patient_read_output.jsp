@@ -26,6 +26,8 @@
 <form>
 	Patient ID:    :<input type="text" name="patient_id" value="${patient.patient_id }" disabled/>
 	<br/>
+	Age:<input type="text" name="vaccination_status" value="${patient.age }" disabled/>
+	<br/>
 	Vaccination Status:<input type="text" name="vaccination_status" value="${patient.vaccination_status }" disabled/>
 	<br/>
 	Hospitalization Date	：<input type="text" name="hospitalization_date" value="${patient.hospitalization_date }" disabled/>

@@ -41,8 +41,8 @@ public class ConditionsDao {
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(patientID)){
+		    	Integer patient_id = Integer.parseInt(resultSet.getString("patient_id"));
+		    	if(patient_id.equals(patientID)){
 		    		condition.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
 		    		condition.setCondition_name(resultSet.getString("condition_name"));
 		    		condition.setCondition_id(Integer.parseInt(resultSet.getString("condition_id")));

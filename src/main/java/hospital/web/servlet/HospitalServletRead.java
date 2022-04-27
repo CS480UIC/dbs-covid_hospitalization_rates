@@ -37,11 +37,11 @@ public class HospitalServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Hospital entity1 = null;
-		HospitalDao entity1Dao = new HospitalDao();
+		Hospital hospital = null;
+		HospitalDao hospitalDao = new HospitalDao();
 		
 		try {
-			entity1 = entity1Dao.findByCountryID(request.getParameter("username"));
+			hospital = hospitalDao.findByHospitalID(Integer.parseInt(request.getParameter("hospital_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class HospitalServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(hospital.getHospital_id()!=null){
+					System.out.println(hospital);
+					request.setAttribute("hospital", hospital);
+					request.getRequestDispatcher("/jsps/hospital/hospital_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/hospital/hospital_read_output.jsp").forward(request, response);
 		}
 	}
 }

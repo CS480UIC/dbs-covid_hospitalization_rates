@@ -16,7 +16,7 @@ public class Patient {
 	private Integer patient_id;
 	private Integer age;
 	private String vaccination_status;
-	private Date hospitalization_date;
+	private String hospitalization_date;
 	/**
 	 * @return the patient_id
 	 */
@@ -56,13 +56,13 @@ public class Patient {
 	/**
 	 * @return the hospitalization_date
 	 */
-	public Date getHospitalization_date() {
+	public String getHospitalization_date() {
 		return hospitalization_date;
 	}
 	/**
 	 * @param hospitalization_date the hospitalization_date to set
 	 */
-	public void setHospitalization_date(Date hospitalization_date) {
+	public void setHospitalization_date(String hospitalization_date) {
 		this.hospitalization_date = hospitalization_date;
 	}
 	
