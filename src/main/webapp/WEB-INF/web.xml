@@ -215,16 +215,6 @@
     <url-pattern>/PatientServletRead</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-    <description></description>
-    <display-name>ConditionsServletCreate</display-name>
-    <servlet-name>ConditionsServletCreate</servlet-name>
-    <servlet-class>conditions.web.servlet.ConditionsServletCreate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ConditionsServletCreate</servlet-name>
-    <url-pattern>/ConditionsServletCreate</url-pattern>
-  </servlet-mapping>
  
    <servlet>
     <description></description>
@@ -236,6 +226,29 @@
     <servlet-name>RoomServletCreate</servlet-name>
     <url-pattern>/RoomServletCreate</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>RoomServletRead</display-name>
+    <servlet-name>RoomServletRead</servlet-name>
+    <servlet-class>room.web.servlet.RoomServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomServletRead</servlet-name>
+    <url-pattern>/RoomServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ConditionsServletCreate</display-name>
+    <servlet-name>ConditionsServletCreate</servlet-name>
+    <servlet-class>conditions.web.servlet.ConditionsServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConditionsServletCreate</servlet-name>
+    <url-pattern>/ConditionsServletCreate</url-pattern>
+  </servlet-mapping>
+ 
   
     <servlet>
     <description></description>

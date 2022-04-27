@@ -23,7 +23,7 @@
   <body>
   <h1>Read Room</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/RoomServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	Room Number    :<input type="text" name="room_number" value="${form.room_number }"/>
 	<span style="color: red; font-weight: 900">${errors.room_number }</span>
