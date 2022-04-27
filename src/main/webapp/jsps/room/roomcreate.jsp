@@ -22,7 +22,7 @@
   
   <body>
   <h1>Room Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/RoomServletCreate'/>" method="post">
 	Room Number    :<input type="text" name="room_number" value="${form.room_number }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>

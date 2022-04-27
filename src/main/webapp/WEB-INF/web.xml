@@ -225,6 +225,17 @@
     <servlet-name>ConditionsServletCreate</servlet-name>
     <url-pattern>/ConditionsServletCreate</url-pattern>
   </servlet-mapping>
+ 
+   <servlet>
+    <description></description>
+    <display-name>RoomServletCreate</display-name>
+    <servlet-name>RoomServletCreate</servlet-name>
+    <servlet-class>room.web.servlet.RoomServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomServletCreate</servlet-name>
+    <url-pattern>/RoomServletCreate</url-pattern>
+  </servlet-mapping>
   
     <servlet>
     <description></description>
