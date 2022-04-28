@@ -24,16 +24,16 @@
   <h1>Update Room</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Room Number    :<input type="text" name="room_number1" value="${room.room_number }" disabled/>
+	Room Number    :<input type="text" name="room_number" value="${room.room_number }" disabled/>
 	<br/>
 	
-	Patient ID:<input type="text" name="patient_id1" value="${room.patient_id }" disabled />
+	Patient ID:<input type="text" name="patient_id" value="${room.patient_id }" disabled />
 	<br/>
-	Employee ID	：<input type="text" name="employee_id1" value="${room.employee_id }" disabled/>
+	Employee ID	：<input type="text" name="employee_id" value="${room.employee_id }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/RoomServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="room_number" value="${room.room_number }"/>
 	Patient ID:<input type="text" name="patient_id" value="${form.patient_id }"/>

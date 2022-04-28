@@ -160,6 +160,17 @@
     <url-pattern>/HospitalServletRead</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>HospitalServletUpdate</display-name>
+    <servlet-name>HospitalServletUpdate</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletUpdate</servlet-name>
+    <url-pattern>/HospitalServletUpdate</url-pattern>
+  </servlet-mapping>
+  
     <servlet>
     <description></description>
     <display-name>HospitalServletDelete</display-name>
@@ -284,6 +295,17 @@
   
   <servlet>
     <description></description>
+    <display-name>PatientServletUpdate</display-name>
+    <servlet-name>PatientServletUpdate</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletUpdate</servlet-name>
+    <url-pattern>/PatientServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>PatientServletDelete</display-name>
     <servlet-name>PatientServletDelete</servlet-name>
     <servlet-class>patient.web.servlet.PatientServletDelete</servlet-class>
@@ -314,6 +336,17 @@
   <servlet-mapping>
     <servlet-name>RoomServletRead</servlet-name>
     <url-pattern>/RoomServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>RoomServletUpdate</display-name>
+    <servlet-name>RoomServletUpdate</servlet-name>
+    <servlet-class>room.web.servlet.RoomServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomServletUpdate</servlet-name>
+    <url-pattern>/RoomServletUpdate</url-pattern>
   </servlet-mapping>
   
   <servlet>

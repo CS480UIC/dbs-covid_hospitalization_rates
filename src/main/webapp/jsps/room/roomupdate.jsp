@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/RoomServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update Room by Number   :<input type="text" name="room_number" value="${form.room_number }"/>
 	<span style="color: red; font-weight: 900">${errors.room_number }</span>

@@ -24,18 +24,21 @@
   <h1>Update Patient</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Patient ID    :<input type="text" name="patient_id1" value="${patient.patient_id1 }" disabled/>
+	Patient ID    :<input type="text" name="patient_id1" value="${patient.patient_id }" disabled/>
 	<br/>
-	
-	Vaccination Status:<input type="text" name="vaccination_status1" value="${patient.vaccination_status1 }" disabled />
+	Age:<input type="text" name="age" value="${patient.age }" disabled/>
 	<br/>
-	Hospitalization Date	：<input type="text" name="hospitalization_date1" value="${patient.hospitalization_date1 }" disabled/>
+	Vaccination Status:<input type="text" name="vaccination_status" value="${patient.vaccination_status }" disabled/>
+	<br/>
+	Hospitalization Date	：<input type="text" name="hospitalization_date" value="${patient.hospitalization_date }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/PatientServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="patient_id" value="${patient.patient_id }"/>
+	Age:<input type="text" name="age" value="${form.age }"/>
+	<br/>
 	Vaccination Status:<input type="text" name="vaccination_status" value="${form.vaccination_status }"/>
 	<span style="color: red; font-weight: 900">${errors.vaccination_status }</span>
 	<br/>

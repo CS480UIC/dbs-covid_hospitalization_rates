@@ -41,13 +41,13 @@ public class PatientServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		PatientDao entity1dao = new PatientDao();
-		Patient entity1 = null;
+		PatientDao patientdao = new PatientDao();
+		Patient patient = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCountryID(request.getParameter("username"));
+				patient = patientdao.findByPatientID(Integer.parseInt(request.getParameter("patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +56,14 @@ public class PatientServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(patient.getPatient_id()!=null){
+				request.setAttribute("patient", patient);
+				request.getRequestDispatcher("/jsps/patient/patient_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "patient not found");
+				request.getRequestDispatcher("/jsps/patient/patient_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +76,13 @@ public class PatientServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setPatient_id(Integer.parseInt(request.getParameter("patient_id")));
+			form.setAge(Integer.parseInt(info.get(2)));
+			form.setVaccination_status(info.get(3));
+			form.setHospitalization_date(java.sql.Date.valueOf(info.get(4)));
 
 			try {
-				entity1dao.update(form);
+				patientdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +91,8 @@ public class PatientServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "patient Updated");
+			request.getRequestDispatcher("/jsps/patient/patient_read_output.jsp").forward(request, response);
 		}
 	}
 }

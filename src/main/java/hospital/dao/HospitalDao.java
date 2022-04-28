@@ -93,11 +93,11 @@ public class HospitalDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE hospital SET hospital_address = ?, hospital_name = ? where hospital_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setString(1,form.getHospital_address());
+		    preparestatement.setString(2,form.getHospital_name());
+		    preparestatement.setInt(3,form.getHospital_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
