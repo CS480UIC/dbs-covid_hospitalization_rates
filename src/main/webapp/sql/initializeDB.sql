@@ -152,8 +152,11 @@ CREATE TABLE `hospital` (
   `hospital_id` int unsigned NOT NULL,
   `hospital_address` varchar(100) NOT NULL,
   `hospital_name` varchar(50) DEFAULT NULL,
+  `country_id` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`hospital_id`),
-  UNIQUE KEY `hospital_id` (`hospital_id`)
+  UNIQUE KEY `hospital_id` (`hospital_id`),
+  KEY `country_id` (`country_id`),
+  CONSTRAINT `hospital_ibfk_1` FOREIGN KEY (`country_id`) REFERENCES `country` (`country_id`) ON DELETE CASCADE ON UPDATE CASCADE
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
