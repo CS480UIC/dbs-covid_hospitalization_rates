@@ -31,7 +31,7 @@ public class InitDao {
 	/**
 	 * password of your username to connect to the database
 	 */
-	private String MySQL_password = "p@ssword0";  //TODO change password
+	private String MySQL_password = "password0";  //TODO change password
 	
 	/**
 	 * get the Search result with Username 
