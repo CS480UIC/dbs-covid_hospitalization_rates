@@ -26,7 +26,7 @@
 <form action="<c:url value='/EmployeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="username" value="${employee.employee_id }"/>
-	Employee ID    :<input type="text" name="employee_id" value="${employee.employee_id }" disabled/>
+	Employee ID    :<input type="text" name="employee_id" value="${employee.employee_id }" />
 	<br/>
 	
 	Name: <input type="text" name="name" value="${employee.name }" disabled/>
