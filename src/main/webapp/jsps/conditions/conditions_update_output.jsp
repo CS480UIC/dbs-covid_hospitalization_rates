@@ -25,18 +25,18 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 
-	Patient ID:    :<input type="text" name="patient_id1" value="${conditions.patient_id }" disabled/>
+	Patient ID:    :<input type="text" name="patient_id" value="${conditions.patient_id }" disabled/>
 	<br/>
-	Condition Name:<input type="text" name="condition_name1" value="${conditions.condition_name }" disabled/>
+	Condition Name:<input type="text" name="condition_name" value="${conditions.condition_name }" disabled/>
+	<br/>
+	Condition ID:<input type="text" name="condition_id" value="${conditions.condition_id }" disabled/>
 	<br/>
 	
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/ConditionsServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }"/>
-	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
-	<br/>
+	<input type="hidden" name="patient_id" value="${conditions.patient_id }"/>
 	Condition Name:<input type="text" name="condition_name" value="${form.condition_name }"/>
 	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
 	<br/>

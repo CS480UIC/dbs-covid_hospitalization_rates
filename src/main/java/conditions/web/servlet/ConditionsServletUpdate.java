@@ -76,7 +76,7 @@ public class ConditionsServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPatient_id(Integer.parseInt(info.get(1)));
+			form.setPatient_id(Integer.parseInt(request.getParameter("patient_id")));
 			form.setCondition_name(info.get(2));
 			form.setCondition_id(Integer.parseInt(info.get(3)));
 

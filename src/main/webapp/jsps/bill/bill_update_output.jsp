@@ -35,8 +35,7 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/BillServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }" />
-	<br/>
+	<input type="hidden" name="bill_id" value="${bill.bill_id }" />
 	Cost    :<input type="text" name="cost" value="${form.cost }" />
 	<br/>
 	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }" />
