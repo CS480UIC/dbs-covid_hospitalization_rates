@@ -316,7 +316,7 @@
   </servlet-mapping>
  
   
-    <servlet>
+   <servlet>
     <description></description>
     <display-name>ConditionsServletRead</display-name>
     <servlet-name>ConditionsServletRead</servlet-name>
@@ -325,6 +325,17 @@
   <servlet-mapping>
     <servlet-name>ConditionsServletRead</servlet-name>
     <url-pattern>/ConditionsServletRead</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ConditionsServletUpdate</display-name>
+    <servlet-name>ConditionsServletUpdate</servlet-name>
+    <servlet-class>conditions.web.servlet.ConditionsServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConditionsServletUpdate</servlet-name>
+    <url-pattern>/ConditionsServletUpdate</url-pattern>
   </servlet-mapping>
   
    <servlet>

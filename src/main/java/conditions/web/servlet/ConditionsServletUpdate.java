@@ -41,13 +41,13 @@ public class ConditionsServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		ConditionsDao entity1dao = new ConditionsDao();
-		Conditions entity1 = null;
+		ConditionsDao conditionsDao = new ConditionsDao();
+		Conditions conditions = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCountryID(request.getParameter("username"));
+				conditions = conditionsDao.findByPatientID(Integer.parseInt(request.getParameter("patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +56,14 @@ public class ConditionsServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(conditions.getCondition_id()!=null){
+				request.setAttribute("conditions", conditions);
+				request.getRequestDispatcher("/jsps/conditions/conditions_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Conditions not found");
+				request.getRequestDispatcher("/jsps/conditions/conditions_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +76,12 @@ public class ConditionsServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setPatient_id(Integer.parseInt(info.get(1)));
+			form.setCondition_name(info.get(2));
+			form.setCondition_id(Integer.parseInt(info.get(3)));
 
 			try {
-				entity1dao.update(form);
+				conditionsDao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +90,8 @@ public class ConditionsServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Conditions Updated");
+			request.getRequestDispatcher("/jsps/conditions/conditions_read_output.jsp").forward(request, response);
 		}
 	}
 }
