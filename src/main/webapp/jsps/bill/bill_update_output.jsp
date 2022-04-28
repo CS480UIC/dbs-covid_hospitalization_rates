@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Bill</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Bill</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	<input type="hidden" name="bill_id" value="${bill.bill_id }"/>
@@ -36,13 +36,10 @@
 <form action="<c:url value='/BillServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 	Bill ID    :<input type="text" name="bill_id" value="${form.bill_id }" />
-		<span style="color: red; font-weight: 900">${errors.bill_id }</span>
 	<br/>
 	Cost    :<input type="text" name="cost" value="${form.cost }" />
-		<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>
 	Patient ID：<input type="text" name="patient_id" value="${form.patient_id }" />
-		<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	<input type="submit" value="Update bill"/>
 </form>

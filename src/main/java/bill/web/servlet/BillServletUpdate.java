@@ -77,9 +77,9 @@ public class BillServletUpdate extends HttpServlet {
 				info.add(values[0]);
 			}
 			
-			form.setBill_id(Integer.parseInt(info.get(0)));
-			form.setCost(Integer.parseInt(info.get(1)));
-			form.setPatient_id(Integer.parseInt(info.get(2)));		
+			form.setBill_id(Integer.parseInt(info.get(1)));
+			form.setCost(Integer.parseInt(info.get(2)));
+			form.setPatient_id(Integer.parseInt(info.get(3)));		
 
 			try {
 				billdao.update(form);
