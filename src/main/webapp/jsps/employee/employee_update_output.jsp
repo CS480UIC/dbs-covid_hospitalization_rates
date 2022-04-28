@@ -24,18 +24,18 @@
   <h1>Update Employee</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Employee ID    :<input type="text" name="employee_id1" value="${employee.employee_id }" disabled/>
+	Employee ID    :<input type="text" name="employee_id" value="${employee.employee_id }" disabled/>
 	<br/>
 	
-	Name: <input type="text" name="name1" value="${employee.name }" disabled />
+	Name: <input type="text" name="name" value="${employee.name }" disabled />
 	<br/>
-	Department	：<input type="text" name="department1" value="${employee.department }" disabled/>
+	Department	：<input type="text" name="department" value="${employee.department }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/EmployeeServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${employee.employee_id }"/>
+				<input type="hidden" name="employee_id" value="${employee.employee_id }"/>
 	Name: <input type="text" name="name" value="${form.name }"/>
 	<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>

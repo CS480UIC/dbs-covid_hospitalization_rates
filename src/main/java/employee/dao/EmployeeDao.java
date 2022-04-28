@@ -29,7 +29,7 @@ public class EmployeeDao {
 	 */
 	private String MySQL_password = "password0"; //TODO change password
 
-	public Employee findByEmployeeID(Integer employeeID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public Employee findByEmployeeID(Integer employee_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Employee employee = new Employee();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -37,12 +37,12 @@ public class EmployeeDao {
 		    String sql = "select * from employee where employee_id=?";
 		    //String sql = "select * from employee where `Employee ID`=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,employeeID);
+		    preparestatement.setInt(1,employee_id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	Integer employee_id = Integer.parseInt(resultSet.getString("employee_id"));
-		    	if(employee_id.equals(employeeID)){
+		    	Integer employeeID = Integer.parseInt(resultSet.getString("employee_id"));
+		    	if(employeeID.equals(employee_id)){
 		    		employee.setEmployee_id(Integer.parseInt(resultSet.getString("employee_id")));
 		    		employee.setName(resultSet.getString("employee_name"));
 		    		employee.setDepartment(resultSet.getString("department"));		
@@ -88,16 +88,16 @@ public class EmployeeDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Patient form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Employee form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			String sql = "UPDATE employee SET employee_name = ?, department = ? where employee_id = ?;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+		    preparestatement.setString(1,form.getName());
+		    preparestatement.setString(2,form.getDepartment());
+		    preparestatement.setInt(3,form.getEmployee_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

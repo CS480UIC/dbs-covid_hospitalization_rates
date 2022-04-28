@@ -41,13 +41,13 @@ public class EmployeeServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		EmployeeDao entity1dao = new EmployeeDao();
-		Employee entity1 = null;
+		EmployeeDao employeedao = new EmployeeDao();
+		Employee employee = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCountryID(request.getParameter("username"));
+				employee = employeedao.findByEmployeeID(Integer.parseInt(request.getParameter("employee_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +56,14 @@ public class EmployeeServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(employee.getName()!=null){
+				request.setAttribute("employee", employee);
+				request.getRequestDispatcher("/jsps/employee/employee_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "employee not found");
+				request.getRequestDispatcher("/jsps/employee/employee_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +76,12 @@ public class EmployeeServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setEmployee_id(Integer.parseInt(request.getParameter("employee_id")));
+			form.setName(info.get(2));
+			form.setDepartment(info.get(3));	
 
 			try {
-				entity1dao.update(form);
+				employeedao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +90,8 @@ public class EmployeeServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "employee Updated");
+			request.getRequestDispatcher("/jsps/employee/employee_read_output.jsp").forward(request, response);
 		}
 	}
 }

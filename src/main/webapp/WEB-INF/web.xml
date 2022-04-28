@@ -237,7 +237,19 @@
     <url-pattern>/EmployeeServletRead</url-pattern>
   </servlet-mapping>
   
-    <servlet>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeServletUpdate</display-name>
+    <servlet-name>EmployeeServletUpdate</servlet-name>
+    <servlet-class>employee.web.servlet.EmployeeServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeServletUpdate</servlet-name>
+    <url-pattern>/EmployeeServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
     <description></description>
     <display-name>EmployeeServletDelete</display-name>
     <servlet-name>EmployeeServletDelete</servlet-name>

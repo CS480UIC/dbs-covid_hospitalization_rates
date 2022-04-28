@@ -26,7 +26,7 @@
 <form>
 	Employee ID    :<input type="text" name="employee_id" value="${employee.employee_id }" disabled/>
 	<br/>
-	Name:<input type="text" name="namw\e" value="${employee.name }" disabled/>
+	Name:<input type="text" name="name" value="${employee.name }" disabled/>
 	<br/>
 	Department	：<input type="text" name="department" value="${employee.department }" disabled/>
 	<br/>
