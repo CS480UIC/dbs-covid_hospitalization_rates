@@ -119,7 +119,7 @@ public class EmployeeDao {
 			
 			String sql = "delete from employee where employee_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,employeeID);
+		    preparestatement.setInt(1,Integer.parseInt(employeeID));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

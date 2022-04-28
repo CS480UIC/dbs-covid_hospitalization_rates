@@ -164,7 +164,7 @@
     <description></description>
     <display-name>HospitalServletDelete</display-name>
     <servlet-name>HospitalServletDelete</servlet-name>
-    <servlet-class>hospital.web.servlet.HospitalServletRead</servlet-class>
+    <servlet-class>hospital.web.servlet.HospitalServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HospitalServletDelete</servlet-name>

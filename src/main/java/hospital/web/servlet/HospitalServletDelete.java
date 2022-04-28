@@ -50,7 +50,7 @@ public class HospitalServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(hospital.getHospital_id()!=null){
+			if(hospital.getHospital_address()!=null){
 						System.out.println(hospital);
 						request.setAttribute("hospital", hospital);
 						request.getRequestDispatcher("/jsps/hospital/hospital_delete_output.jsp").forward(request, response);			

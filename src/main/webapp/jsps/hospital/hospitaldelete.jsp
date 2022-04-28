@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Delete hospital</h1>
+  <h1>Delete Hospital</h1>
 <form action="<c:url value='/HospitalServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Hospital by ID  : <input type="text" name="hospital_id" value="${form.hospital_id }"/>

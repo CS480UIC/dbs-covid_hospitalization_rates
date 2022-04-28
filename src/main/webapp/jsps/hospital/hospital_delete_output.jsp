@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Hospital</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/HospitalServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
