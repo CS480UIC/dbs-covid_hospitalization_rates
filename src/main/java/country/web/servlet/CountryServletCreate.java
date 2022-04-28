@@ -50,7 +50,7 @@ public class CountryServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setCountryID(info.get(0));
+		form.setCountry_id(info.get(0));
 		form.setCountry_name(info.get(1));
 		form.setPopulation(Integer.parseInt(info.get(2)));
 		

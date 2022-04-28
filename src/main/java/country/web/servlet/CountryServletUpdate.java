@@ -41,13 +41,13 @@ public class CountryServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		CountryDao entity1dao = new CountryDao();
-		Country entity1 = null;
+		CountryDao countrydao = new CountryDao();
+		Country country = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCountryID(request.getParameter("username"));
+				country = countrydao.findByCountry_id(request.getParameter("country_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +56,14 @@ public class CountryServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(country.getPopulation()!=null){
+				request.setAttribute("country", country);
+				request.getRequestDispatcher("/jsps/country/country_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Country not found");
+				request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +76,12 @@ public class CountryServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setCountry_id(request.getParameter("country_id"));
+			form.setCountry_name(info.get(2));
+			form.setPopulation(Integer.parseInt(info.get(3)));
 
 			try {
-				entity1dao.update(form);
+				countrydao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +90,8 @@ public class CountryServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Country Updated");
+			request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
 		}
 	}
 }

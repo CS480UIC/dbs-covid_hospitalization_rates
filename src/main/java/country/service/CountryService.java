@@ -21,8 +21,8 @@ public class CountryService {
 	 */
 	public void create(Country form) throws CountryException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Country country = countryDao.findByCountryID(form.getCountryID());
-		if(country.getCountryID()!=null && country.getCountryID().equals(form.getCountryID())) throw new CountryException("This country has been registered!");
+		Country country = countryDao.findByCountry_id(form.getCountry_id());
+		if(country.getCountry_id()!=null && country.getCountry_id().equals(form.getCountry_id())) throw new CountryException("This country has been registered!");
 		countryDao.add(form);
 	}
 

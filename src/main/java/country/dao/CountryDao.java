@@ -29,21 +29,21 @@ public class CountryDao {
 	 */
 	private String MySQL_password = "password0"; //TODO change password
 
-	public Country findByCountryID(String countryID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public Country findByCountry_id(String country_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Country country = new Country();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 		    String sql = "select * from country where `country_id`=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,countryID);
+		    preparestatement.setString(1,country_id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String country_id = resultSet.getString("country_id");
-		    	if(country_id.equals(countryID)){
+		    	String countryid = resultSet.getString("country_id");
+		    	if(countryid.equals(country_id)){
 		    		country.setCountry_name(resultSet.getString("country_name"));
-		    		country.setCountryID(resultSet.getString("country_id"));
+		    		country.setCountry_id(resultSet.getString("country_id"));
 		    		country.setPopulation(Integer.parseInt(resultSet.getString("population")));
 		    	}
 		    }
@@ -69,7 +69,7 @@ public class CountryDao {
 			
 			String sql = "insert into country (`country_id`, `country_name`, `population`) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getCountryID());
+		    preparestatement.setString(1,form.getCountry_id());
 		    preparestatement.setString(2,form.getCountry_name());
 		    preparestatement.setInt(3,form.getPopulation());
 		    preparestatement.executeUpdate();
@@ -91,11 +91,11 @@ public class CountryDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE country SET country_name = ?, population = ? where country_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setString(1,form.getCountry_name());
+		    preparestatement.setInt(2,form.getPopulation());
+		    preparestatement.setString(3,form.getCountry_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -110,14 +110,14 @@ public class CountryDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String countryID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String country_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
 			String sql = "delete from country where country_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,countryID);
+		    preparestatement.setString(1,country_id);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

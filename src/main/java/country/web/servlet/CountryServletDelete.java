@@ -41,7 +41,7 @@ public class CountryServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				country = countryDao.findByCountryID(request.getParameter("country_id"));
+				country = countryDao.findByCountry_id(request.getParameter("country_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,7 +50,7 @@ public class CountryServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(country.getCountryID()!=null){
+			if(country.getCountry_id()!=null){
 						System.out.println(country);
 						request.setAttribute("country", country);
 						request.getRequestDispatcher("/jsps/country/country_delete_output.jsp").forward(request, response);			

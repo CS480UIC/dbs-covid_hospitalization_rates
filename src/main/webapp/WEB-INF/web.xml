@@ -118,6 +118,17 @@
   
   <servlet>
     <description></description>
+    <display-name>CountryServletUpdate</display-name>
+    <servlet-name>CountryServletUpdate</servlet-name>
+    <servlet-class>country.web.servlet.CountryServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountryServletUpdate</servlet-name>
+    <url-pattern>/CountryServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>CountryServletDelete</display-name>
     <servlet-name>CountryServletDelete</servlet-name>
     <servlet-class>country.web.servlet.CountryServletDelete</servlet-class>

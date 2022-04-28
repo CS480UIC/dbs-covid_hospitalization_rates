@@ -8,20 +8,20 @@ package country.domain;
  */
 public class Country {
 	
-	private String countryID;
+	private String country_id;
 	private String country_name;
 	private Integer population;
 	/**
-	 * @return the countryID
+	 * @return the country_id
 	 */
-	public String getCountryID() {
-		return countryID;
+	public String getCountry_id() {
+		return country_id;
 	}
 	/**
-	 * @param countryID the countryID to set
+	 * @param country_id the country_id to set
 	 */
-	public void setCountryID(String countryID) {
-		this.countryID = countryID;
+	public void setCountry_id(String country_id) {
+		this.country_id = country_id;
 	}
 	/**
 	 * @return the country_name

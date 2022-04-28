@@ -21,25 +21,27 @@
   </head>
   
   <body>
-  <h1>Update Preexisting Conditions</h1>
+  <h1>Update Country</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Patient ID    :<input type="text" name="patient_id1" value="${preexisting_conditions.patient_id1 }" disabled/>
+	Country ID    :<input type="text" name="country_id" value="${country.country_id }" disabled/>
 	<br/>
 	
-	Preexisting Conditions Name:<input type="text" name="country_name1" value="${preexisting_conditions.country_name1 }" disabled />
+	Country Name:<input type="text" name="country_name" value="${country.country_name }" disabled />
 	<br/>
-	Population	：<input type="text" name="population1" value="${preexisting_conditions.population1 }" disabled/>
+	Population	：<input type="text" name="population" value="${country.population }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/CountryServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="patient_id" value="${preexisting_conditions.patient_id }"/>
-	Conditions Name:<input type="text" name="condition_name" value="${form.condition_name }"/>
-	<span style="color: red; font-weight: 900">${errors.condition_name }</span>
+		<input type="hidden" name="country_id" value="${country.country_id }"/>
+	Country Name:<input type="text" name="condition_name" value="${form.country_name }"/>
+	<span style="color: red; font-weight: 900">${errors.country_name }</span>
+	Population:<input type="text" name="population" value="${form.population }"/>
+	<span style="color: red; font-weight: 900">${errors.population }</span>
 	<br/>
-	<input type="submit" value="Update Preexisting Conditions"/>
+	<input type="submit" value="Update Country"/>
 </form>
 
 </body>

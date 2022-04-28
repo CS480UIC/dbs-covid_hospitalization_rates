@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/CountryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Country ID    :<input type="text" name="country_id" value="${form.countryID }"/>
+	Country ID    :<input type="text" name="country_id" value="${form.country_id }"/>
 	<span style="color: red; font-weight: 900">${errors.country_id }</span>
 	<br/>
 <%-- 	Country Name:<input type="text" name="country_name" value="${form.country_name }"/>
