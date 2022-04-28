@@ -30,6 +30,8 @@
 	<br/>
 	Hospital Name	：<input type="text" name="hospital_name" value="${hospital.hospital_name }" disabled/>
 	<br/>
+	Country ID	：<input type="text" name="country_id" value="${hospital.country_id }" disabled/>
+	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

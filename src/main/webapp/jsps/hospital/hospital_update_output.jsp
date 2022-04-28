@@ -30,6 +30,8 @@
 	<br/>
 	Hospital Name	：<input type="text" name="hospital_name" value="${hospital.hospital_name }" disabled/>
 	<br/>
+	Country ID	：<input type="text" name="country_id" value="${hospital.country_id }" disabled/>
+	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/HospitalServletUpdate'/>" method="post">
@@ -40,6 +42,9 @@
 	<br/>
 	Hospital Name	：<input type="text" name="hospital_name" value="${form.hospital_name }"/>
 		<span style="color: red; font-weight: 900">${errors.hospital_name }</span>
+	<br/>
+	Country ID	：<input type="text" name="country_id" value="${form.country_id }" />
+		<span style="color: red; font-weight: 900">${errors.country_id }</span>
 	<br/>
 	<input type="submit" value="Update hospital"/>
 </form>

@@ -52,7 +52,8 @@ public class HospitalServletCreate extends HttpServlet {
 		}
 		form.setHospital_id(Integer.parseInt(info.get(0)));
 		form.setHospital_address(info.get(1));
-		form.setHospital_name(info.get(2));		
+		form.setHospital_name(info.get(2));
+		form.setCountry_id(Integer.parseInt(info.get(3)));	
 		
 		try {
 			hospitalservice.create(form);

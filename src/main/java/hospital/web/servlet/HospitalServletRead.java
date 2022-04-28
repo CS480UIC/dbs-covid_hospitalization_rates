@@ -56,7 +56,7 @@ public class HospitalServletRead extends HttpServlet {
 					request.getRequestDispatcher("/jsps/hospital/hospital_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
+			request.setAttribute("msg", "Hospital not found");
 			request.getRequestDispatcher("/jsps/hospital/hospital_read_output.jsp").forward(request, response);
 		}
 	}

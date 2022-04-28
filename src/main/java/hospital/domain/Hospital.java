@@ -13,6 +13,7 @@ public class Hospital {
 	private Integer hospital_id;
 	private String hospital_address;
 	private String hospital_name;
+	private Integer country_id;
 	/**
 	 * @return the hospital_id
 	 */
@@ -24,6 +25,19 @@ public class Hospital {
 	 */
 	public void setHospital_id(Integer hospital_id) {
 		this.hospital_id = hospital_id;
+	}
+	
+	/**
+	 * @return the country_id
+	 */
+	public Integer getCountry_id() {
+		return country_id;
+	}
+	/**
+	 * @param country_id the country_id to set
+	 */
+	public void setCountry_id(Integer country_id) {
+		this.country_id = country_id;
 	}
 	/**
 	 * @return the hospital_address

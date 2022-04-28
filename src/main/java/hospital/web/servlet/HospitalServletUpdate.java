@@ -79,6 +79,7 @@ public class HospitalServletUpdate extends HttpServlet {
 			form.setHospital_id(Integer.parseInt(request.getParameter("hospital_id")));
 			form.setHospital_address(info.get(2));
 			form.setHospital_name(info.get(3));		
+			form.setCountry_id(Integer.parseInt(info.get(4)));	
 
 			try {
 				hospitaldao.update(form);

@@ -45,7 +45,8 @@ public class HospitalDao {
 		    	if(hospital_id.equals(hospitalID)){
 		    		hospital.setHospital_id(Integer.parseInt(resultSet.getString("hospital_id")));
 		    		hospital.setHospital_address(resultSet.getString("hospital_address"));
-		    		hospital.setHospital_name(resultSet.getString("hospital_name"));		
+		    		hospital.setHospital_name(resultSet.getString("hospital_name"));	
+		    		hospital.setCountry_id(Integer.parseInt(resultSet.getString("country_id")));
 		    	}
 		    }
 		    connect.close();
@@ -68,12 +69,13 @@ public class HospitalDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "insert into hospital (hospital_id, hospital_address, hospital_name) values(?,?,?)";
-			//String sql = "insert into hospital (`Hospital ID`, `Hospital Address`, `Hospital Name`) values(?,?,?)";
+			String sql = "insert into hospital (hospital_id, hospital_address, hospital_name, country_id) values(?,?,?,?)";
+			//String sql = "insert into hospital (`Hospital ID`, `Hospital Address`, `Hospital Name`, 'Country ID') values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getHospital_id());
 		    preparestatement.setString(2,form.getHospital_address());
 		    preparestatement.setString(3,form.getHospital_name());
+		    preparestatement.setInt(4,form.getCountry_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -93,11 +95,12 @@ public class HospitalDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE hospital SET hospital_address = ?, hospital_name = ? where hospital_id = ?;";
+			String sql = "UPDATE hospital SET hospital_address = ?, hospital_name = ?, country_id = ? where hospital_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getHospital_address());
 		    preparestatement.setString(2,form.getHospital_name());
 		    preparestatement.setInt(3,form.getHospital_id());
+		    preparestatement.setInt(4,form.getCountry_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
