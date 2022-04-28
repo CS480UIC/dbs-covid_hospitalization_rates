@@ -57,12 +57,13 @@ public class EmployeeServletDelete extends HttpServlet {
 				}
 				else{
 				request.setAttribute("msg", "Employee not found");
-				request.getRequestDispatcher("/jsps/employee/employee_delete_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/employee/employee_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
+				System.out.println(employee);
 				employeeDao.delete(request.getParameter("employee_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -72,10 +73,13 @@ public class EmployeeServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Employee Deleted");
-			request.getRequestDispatcher("/jsps/employee/employee_delete_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/employee/employee_read_output.jsp").forward(request, response);
 		}
 	}
 }
+
+
+
 
 
 

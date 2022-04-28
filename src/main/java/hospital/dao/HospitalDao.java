@@ -112,14 +112,14 @@ public class HospitalDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String hospital_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String hospital_id1) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid_hospitalization_rates", MySQL_user, MySQL_password);
 			
 			String sql = "delete from hospital where hospital_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,hospital_id);
+		    preparestatement.setInt(1,Integer.parseInt(hospital_id1));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
